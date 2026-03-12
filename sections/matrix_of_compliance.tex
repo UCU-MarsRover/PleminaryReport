@@ -1,0 +1,91 @@
+% =============================================================================
+% sections/matrix_of_compliance.tex  -  Section 1: Matrix of Compliance
+%
+% SCORING: 0--25 pts
+%   - MoC delivered as embedded .xlsx:  6 pts
+%   - Compliance status filled:          1 pt
+%   - Comments to all requirements:      2 pts
+%   - Summary of compliance in report:   1 pt
+%   - Technical excellence:             15 pts
+% =============================================================================
+
+\section{Matrix of Compliance}
+\label{sec:moc}
+
+% ---- Embedded MoC file (6 pts if attached as .xlsx inside PDF) --------------
+% After compiling to PDF, embed the .xlsx file using a PDF editor
+% (e.g. Foxit PDF Editor) to earn the full 6 pts.
+% Uncomment the line below once the file exists:
+% \textattachfile[color=0 0 1]{MoC_\teamname_ERC2026.xlsx}%
+%     {\textbf{[Attached: MoC\_\teamname\_ERC2026.xlsx]}}
+
+% ---- Compliance summary -----------------------------------------------------
+\subsection{Summary of Compliance}
+\label{subsec:moc_summary}
+
+Table~\ref{tab:moc_summary} presents the overall compliance status of the
+\teamname\ rover and drone system against the ERC~2026 requirements.
+
+\begin{table}[H]
+    \centering
+    \caption{Compliance status summary}
+    \label{tab:moc_summary}
+    \begin{tabular}{lc}
+        \toprule
+        \textbf{Status} & \textbf{Count} \\
+        \midrule
+        Compliant (\compliant)             & [X] \\
+        Partially Compliant (\partlycompliant) & [X] \\
+        Non-Compliant (\noncompliant)      & [X] \\
+        Not Applicable (\notapplicable)    & [X] \\
+        \midrule
+        \textbf{Total requirements}        & [X] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Compliance table -------------------------------------------------------
+\subsection{Compliance Table}
+\label{subsec:moc_table}
+
+Table~\ref{tab:moc} lists all applicable ERC~2026 requirements together with
+the team's compliance status and verification justification.
+Each row shall be completed; do \textbf{not} leave any cells empty.
+
+\begin{longtable}{C{0.7cm} L{3.5cm} C{1.2cm} L{6cm}}
+    \caption{Matrix of Compliance}
+    \label{tab:moc} \\
+    \toprule
+    \textbf{ID} & \textbf{Requirement} & \textbf{Status} & \textbf{Comments / Justification} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{4}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Requirement} & \textbf{Status} & \textbf{Comments / Justification} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{4}{r}{\small\itshape (continued on next page)} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    % --- Example rows -- replace with actual ERC 2026 requirements ---
+    R-01 & [Requirement text]  & \compliant           & [Justification] \\
+    R-02 & [Requirement text]  & \partlycompliant     & [Justification] \\
+    R-03 & [Requirement text]  & \noncompliant        & [Justification] \\
+    R-04 & [Requirement text]  & \notapplicable       & [Justification] \\
+    % Add all requirements ...
+\end{longtable}
+
+% ---- Verification methods legend --------------------------------------------
+\subsubsection*{Compliance Status Legend}
+\begin{itemize}[nosep]
+    \item \compliant{} -- \textbf{Compliant}: requirement is fully met.
+    \item \partlycompliant{} -- \textbf{Partially Compliant}: requirement is
+          partially met; a mitigation plan is in place.
+    \item \noncompliant{} -- \textbf{Non-Compliant}: requirement is not met;
+          explain why and what actions are planned.
+    \item \notapplicable{} -- \textbf{Not Applicable}: requirement does not
+          apply to this design; provide justification.
+\end{itemize}

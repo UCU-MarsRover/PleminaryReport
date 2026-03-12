@@ -1,0 +1,106 @@
+% =============================================================================
+% preamble.tex - LaTeX preamble for European Rover Challenge Preliminary Report
+% =============================================================================
+
+% --- Page geometry -----------------------------------------------------------
+\usepackage[a4paper,
+            top=2.54cm, bottom=2.54cm,
+            left=2.54cm, right=2.54cm]{geometry}
+
+% --- Encoding & fonts --------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% --- Language ----------------------------------------------------------------
+\usepackage[english]{babel}
+
+% --- Colour ------------------------------------------------------------------
+\usepackage[dvipsnames,table]{xcolor}
+\definecolor{ercblue}{RGB}{0,70,127}
+\definecolor{templateblue}{RGB}{0,112,192}
+\definecolor{templatered}{RGB}{192,0,0}
+
+% --- Graphics & figures ------------------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% --- Tables ------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% --- Math --------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Lists -------------------------------------------------------------------
+\usepackage{enumitem}
+
+% --- Hyperlinks & PDF metadata -----------------------------------------------
+\usepackage[
+    pdftitle={Preliminary Report -- European Rover Challenge 2026},
+    pdfauthor={UCU Mars Rover Team},
+    pdfsubject={European Rover Challenge 2026},
+    pdfkeywords={Mars Rover, ERC 2026, Preliminary Report},
+    colorlinks=true,
+    linkcolor=ercblue,
+    urlcolor=ercblue,
+    citecolor=ercblue,
+    bookmarks=true,
+    bookmarksopen=true
+]{hyperref}
+
+% --- Header & footer ---------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{ercblue}{\teamname\ -- Preliminary Report}}
+\fancyhead[R]{\small\textcolor{ercblue}{ERC 2026}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+% --- Section formatting ------------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{ercblue}}{{\thesection}}{1em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\color{ercblue}}{{\thesubsection}}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{{\thesubsubsection}}{1em}{}
+
+% --- PDF attachments (for embedding MoC .xlsx) -------------------------------
+\usepackage{attachfile2}
+
+% --- Miscellaneous -----------------------------------------------------------
+\usepackage{microtype}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{lipsum}   % placeholder text -- remove in final version
+\usepackage{todonotes}
+
+% --- Custom commands ---------------------------------------------------------
+% Team name -- change this in main.tex
+\newcommand{\teamname}{TEAM NAME}
+\newcommand{\projectname}{PROJECT NAME}
+\newcommand{\submissiondate}{\today}
+\newcommand{\revisionnum}{1.0}
+
+% Compliance status helper commands
+\newcommand{\compliant}{\textcolor{Green}{\textbf{C}}}        % Compliant
+\newcommand{\partlycompliant}{\textcolor{Orange}{\textbf{PC}}} % Partially Compliant
+\newcommand{\noncompliant}{\textcolor{Red}{\textbf{NC}}}       % Non-Compliant
+\newcommand{\notapplicable}{\textbf{N/A}}                      % Not Applicable
+
+% Risk level helper commands
+\newcommand{\riskhigh}{\cellcolor{red!40}\textbf{High}}
+\newcommand{\riskmedium}{\cellcolor{orange!40}\textbf{Medium}}
+\newcommand{\risklow}{\cellcolor{green!30}\textbf{Low}}

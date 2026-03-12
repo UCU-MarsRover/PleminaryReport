@@ -1,0 +1,230 @@
+% =============================================================================
+% sections/preliminary_design_description.tex  -  Section 3: Design Description
+%
+% SCORING: 0--48 pts
+%   Structure (0-8 pts):
+%     - Product Trees / Physical Breakdown Structures        (0-2 pts)
+%     - Rover design description                             (0-1 pts)
+%     - Rover technical budget (mass, power, data link)      (0-1 pts)
+%     - Rover safety system description                      (0-1 pts)
+%     - Drone design description                             (0-1 pts)
+%     - Drone technical budget (mass, power, data link)      (0-1 pts)
+%     - Drone safety system description                      (0-1 pts)
+%   Rover design excellence (0-25 pts)
+%   Drone design excellence (0-15 pts; 0 if fully COTS drone)
+% =============================================================================
+
+\section{Preliminary Design Description}
+\label{sec:design}
+
+% ---- 3.1  Product Trees / Physical Breakdown Structures ---------------------
+\subsection{Product Trees / Physical Breakdown Structures}
+\label{subsec:pbs}
+
+Figures~\ref{fig:rover_pbs} and~\ref{fig:drone_pbs} present the Product Trees
+(Physical Breakdown Structures) for the rover and the drone, respectively.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2.5cm}
+        [Insert Rover Product Tree / PBS diagram here]\vspace{2.5cm}}}
+    \caption{Rover Physical Breakdown Structure}
+    \label{fig:rover_pbs}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2.5cm}
+        [Insert Drone Product Tree / PBS diagram here]\vspace{2.5cm}}}
+    \caption{Drone Physical Breakdown Structure}
+    \label{fig:drone_pbs}
+\end{figure}
+
+% =============================================================================
+% ---- 3.2  ROVER DESIGN DESCRIPTION -----------------------------------------
+% =============================================================================
+\subsection{Rover Design Description}
+\label{subsec:rover_design}
+
+% Each team contributes its own sub-section.
+% The per-team files are located in the teams/ subdirectory.
+
+\subsubsection{Suspension System}
+\label{subsubsec:suspension}
+\input{teams/suspension/design}
+
+\subsubsection{Robotic Arm}
+\label{subsubsec:arm}
+\input{teams/arm/design}
+
+\subsubsection{Science Module}
+\label{subsubsec:science}
+\input{teams/science/design}
+
+\subsubsection{Navigation System}
+\label{subsubsec:navigation}
+\input{teams/navigation/design}
+
+\subsubsection{General Electronics}
+\label{subsubsec:electronics}
+\input{teams/electronics/design}
+
+\subsubsection{Ground Station}
+\label{subsubsec:ground_station}
+\input{teams/ground_station/design}
+
+% ---- Rover technical budget -------------------------------------------------
+\subsection{Rover Technical Budget}
+\label{subsec:rover_budget}
+
+\subsubsection{Mass Budget}
+\begin{table}[H]
+    \centering
+    \caption{Rover mass budget}
+    \label{tab:rover_mass}
+    \begin{tabular}{L{5cm} R{2cm} L{4cm}}
+        \toprule
+        \textbf{Subsystem} & \textbf{Mass (kg)} & \textbf{Notes} \\
+        \midrule
+        Chassis / frame      & [X.X] & \\
+        Suspension           & [X.X] & \\
+        Drive motors         & [X.X] & \\
+        Robotic arm          & [X.X] & \\
+        Science module       & [X.X] & \\
+        Electronics box      & [X.X] & \\
+        Battery pack         & [X.X] & \\
+        Communication system & [X.X] & \\
+        Miscellaneous        & [X.X] & \\
+        \midrule
+        \textbf{Total}       & \textbf{[X.X]} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Power Budget}
+\begin{table}[H]
+    \centering
+    \caption{Rover power budget}
+    \label{tab:rover_power}
+    \begin{tabular}{L{5cm} R{2.2cm} R{2.2cm} L{3cm}}
+        \toprule
+        \textbf{Subsystem} & \textbf{Avg.\ power (W)} & \textbf{Peak power (W)} & \textbf{Notes} \\
+        \midrule
+        Drive motors         & [X.X] & [X.X] & \\
+        Robotic arm motors   & [X.X] & [X.X] & \\
+        Science module       & [X.X] & [X.X] & \\
+        On-board computers   & [X.X] & [X.X] & \\
+        Communication        & [X.X] & [X.X] & \\
+        Sensors / cameras    & [X.X] & [X.X] & \\
+        Miscellaneous        & [X.X] & [X.X] & \\
+        \midrule
+        \textbf{Total}       & \textbf{[X.X]} & \textbf{[X.X]} & \\
+        \midrule
+        Battery capacity     & \multicolumn{2}{l}{[X.X] Wh} & \\
+        Estimated run time   & \multicolumn{2}{l}{[X.X] min} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Data Link Budget}
+\begin{table}[H]
+    \centering
+    \caption{Rover data link budget}
+    \label{tab:rover_datalink}
+    \begin{tabular}{L{4cm} L{2.5cm} L{2.5cm} L{3cm}}
+        \toprule
+        \textbf{Link} & \textbf{Frequency} & \textbf{Data rate} & \textbf{Notes} \\
+        \midrule
+        Rover $\leftrightarrow$ Base station & [X GHz] & [X Mbps] & \\
+        Video stream            & [X GHz] & [X Mbps] & \\
+        Telemetry               & [X GHz] & [X kbps] & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Rover safety system ----------------------------------------------------
+\subsection{Rover Safety System}
+\label{subsec:rover_safety}
+
+[Describe all safety mechanisms implemented on the rover, e.g.\ emergency stop,
+current limiters, watchdog timers, mechanical failsafes, etc.
+Include a diagram if possible.]
+
+% =============================================================================
+% ---- 3.3  DRONE DESIGN DESCRIPTION -----------------------------------------
+% =============================================================================
+\subsection{Drone Design Description}
+\label{subsec:drone_design}
+
+\input{teams/drone/design}
+
+% ---- Drone technical budget -------------------------------------------------
+\subsection{Drone Technical Budget}
+\label{subsec:drone_budget}
+
+\subsubsection{Mass Budget}
+\begin{table}[H]
+    \centering
+    \caption{Drone mass budget}
+    \label{tab:drone_mass}
+    \begin{tabular}{L{5cm} R{2cm} L{4cm}}
+        \toprule
+        \textbf{Component} & \textbf{Mass (kg)} & \textbf{Notes} \\
+        \midrule
+        Frame / structure    & [X.X] & \\
+        Motors (×N)          & [X.X] & \\
+        Propellers (×N)      & [X.X] & \\
+        Flight controller    & [X.X] & \\
+        Battery pack         & [X.X] & \\
+        Camera / payload     & [X.X] & \\
+        Miscellaneous        & [X.X] & \\
+        \midrule
+        \textbf{Total}       & \textbf{[X.X]} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Power Budget}
+\begin{table}[H]
+    \centering
+    \caption{Drone power budget}
+    \label{tab:drone_power}
+    \begin{tabular}{L{5cm} R{2.2cm} R{2.2cm} L{3cm}}
+        \toprule
+        \textbf{Component} & \textbf{Avg.\ power (W)} & \textbf{Peak power (W)} & \textbf{Notes} \\
+        \midrule
+        Motors (hover)       & [X.X] & [X.X] & \\
+        Flight controller    & [X.X] & [X.X] & \\
+        Camera / payload     & [X.X] & [X.X] & \\
+        Communication        & [X.X] & [X.X] & \\
+        \midrule
+        \textbf{Total}       & \textbf{[X.X]} & \textbf{[X.X]} & \\
+        \midrule
+        Battery capacity     & \multicolumn{2}{l}{[X.X] Wh} & \\
+        Estimated flight time & \multicolumn{2}{l}{[X.X] min} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Data Link Budget}
+\begin{table}[H]
+    \centering
+    \caption{Drone data link budget}
+    \label{tab:drone_datalink}
+    \begin{tabular}{L{4cm} L{2.5cm} L{2.5cm} L{3cm}}
+        \toprule
+        \textbf{Link} & \textbf{Frequency} & \textbf{Data rate} & \textbf{Notes} \\
+        \midrule
+        Drone $\leftrightarrow$ Base station & [X GHz] & [X Mbps] & \\
+        Video downlink          & [X GHz] & [X Mbps] & \\
+        Telemetry               & [X GHz] & [X kbps] & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Drone safety system ----------------------------------------------------
+\subsection{Drone Safety System}
+\label{subsec:drone_safety}
+
+[Describe all safety mechanisms implemented on the drone, e.g.\ return-to-home,
+geofencing, failsafe modes, motor arm/disarm procedures, pre-flight checklist, etc.]

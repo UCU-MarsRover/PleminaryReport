@@ -1,0 +1,112 @@
+% =============================================================================
+% teams/electronics/design.tex  -  General Electronics Team design contribution
+%
+% Filled in by: General Electronics Team
+% This file is included in sections/preliminary_design_description.tex
+% under Section 3.2 "Rover Design Description" > "General Electronics".
+% =============================================================================
+
+% ---- Overview ---------------------------------------------------------------
+\paragraph{Overview.}
+[Describe the overall electronics architecture of the rover: main power supply,
+on-board computers, communication interfaces, PCB design approach, and how
+subsystems are integrated.]
+
+% ---- Power Architecture -----------------------------------------------------
+\paragraph{Power Architecture.}
+[Describe the battery system, BMS (Battery Management System), power
+distribution board (PDB), voltage regulators, fusing / protection, and any
+power monitoring capability.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2.5cm}
+        [Insert power architecture block diagram here]\vspace{2.5cm}}}
+    \caption{Rover power architecture -- block diagram}
+    \label{fig:power_arch}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Battery system specifications}
+    \label{tab:battery_specs}
+    \begin{tabular}{L{5cm} L{7cm}}
+        \toprule
+        \textbf{Parameter}            & \textbf{Value / Description} \\
+        \midrule
+        Battery chemistry             & [LiPo / Li-ion / LiFePO\textsubscript{4}] \\
+        Configuration                 & [XS / XP -- series/parallel] \\
+        Nominal voltage               & [XX.X V] \\
+        Capacity                      & [X,XXX mAh] \\
+        Energy                        & [XX.X Wh] \\
+        Max.\ continuous discharge    & [XX A] \\
+        BMS                           & [COTS / custom, model] \\
+        Estimated run time            & [XX min] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- On-board Computing -----------------------------------------------------
+\paragraph{On-board Computing.}
+[Describe the on-board computer hierarchy: main mission computer, co-processors,
+microcontrollers. List each board, its OS / firmware, and its role.]
+
+\begin{table}[H]
+    \centering
+    \caption{On-board computing units}
+    \label{tab:computing}
+    \begin{tabular}{L{3.5cm} L{2cm} L{2.5cm} L{4cm}}
+        \toprule
+        \textbf{Board / Device} & \textbf{Type} & \textbf{OS / Firmware} & \textbf{Role} \\
+        \midrule
+        [Main computer]         & COTS & [Ubuntu / ROS 2] & Mission control \\
+        [MCU -- arm control]    & Custom & [FreeRTOS / bare metal] & Arm joint control \\
+        [MCU -- drive control]  & Custom & [FreeRTOS / bare metal] & Motor drive \\
+        [MCU -- science]        & COTS & [Arduino / bare metal]  & Sensor readout \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Communication & Interfaces ---------------------------------------------
+\paragraph{Internal Communication \& Interfaces.}
+[Describe the internal bus topology: which protocols are used between
+subsystems (CAN, RS-485, UART, SPI, I\textsuperscript{2}C, Ethernet, USB),
+and any network switches or hubs on-board.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2.5cm}
+        [Insert electronics architecture / block diagram here]\vspace{2.5cm}}}
+    \caption{Rover electronics architecture -- block diagram}
+    \label{fig:elec_arch}
+\end{figure}
+
+% ---- Custom PCB Design ------------------------------------------------------
+\paragraph{Custom PCB Design.}
+[Describe any PCBs designed by the team: purpose, key ICs, design tool used,
+prototyping and testing approach.]
+
+% ---- Safety \& Protection ---------------------------------------------------
+\paragraph{Safety \& Protection.}
+[Describe hardware safety features: fuses, overcurrent protection, reverse
+polarity protection, emergency stop circuit, watchdog timers, and any
+galvanic isolation used.]
+
+% ---- Key Specifications Table -----------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Electronics key specifications}
+    \label{tab:elec_specs}
+    \begin{tabular}{L{5cm} L{7cm}}
+        \toprule
+        \textbf{Parameter}             & \textbf{Value / Description} \\
+        \midrule
+        Main supply voltage            & [XX.X V] \\
+        Regulated voltages present     & [3.3 V / 5 V / 12 V / 24 V] \\
+        Total peak current draw        & [XX A] \\
+        Number of custom PCBs          & [N] \\
+        Internal communication bus(es) & [CAN / RS-485 / Ethernet] \\
+        E-stop type                    & [Wireless / physical] \\
+        \bottomrule
+    \end{tabular}
+\end{table}

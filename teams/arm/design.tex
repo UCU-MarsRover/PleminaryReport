@@ -1,0 +1,80 @@
+% =============================================================================
+% teams/arm/design.tex  -  Robotic Arm Team design contribution
+%
+% Filled in by: Arm Team
+% This file is included in sections/preliminary_design_description.tex
+% under Section 3.2 "Rover Design Description" > "Robotic Arm".
+% =============================================================================
+
+% ---- Overview ---------------------------------------------------------------
+\paragraph{Overview.}
+[Provide a short description of the robotic arm: number of degrees of freedom
+(DoF), reach, payload capacity, and primary mission use-cases (sample
+collection, maintenance task, etc.).]
+
+% ---- Mechanical Design ------------------------------------------------------
+\paragraph{Mechanical Design.}
+[Describe the structural configuration of the arm (links, joints), materials
+used, end-effector design, and how the arm is mounted to the rover chassis.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}
+        [Insert arm CAD / schematic here]\vspace{2cm}}}
+    \caption{Robotic arm -- mechanical overview}
+    \label{fig:arm_mech}
+\end{figure}
+
+% ---- Actuators & Drive System -----------------------------------------------
+\paragraph{Actuators \& Drive System.}
+[List and describe each joint actuator (servo, stepper, brushless motor + encoder).
+Include torque and speed specifications for each joint.]
+
+\begin{table}[H]
+    \centering
+    \caption{Arm joint actuator specifications}
+    \label{tab:arm_joints}
+    \begin{tabular}{C{0.8cm} L{2.5cm} L{3cm} R{2.2cm} R{2.2cm}}
+        \toprule
+        \textbf{Joint} & \textbf{Name} & \textbf{Actuator type} & \textbf{Torque (N$\cdot$m)} & \textbf{Speed (°/s)} \\
+        \midrule
+        J1 & [Base rotation]    & [Servo / motor type] & [X.X] & [X] \\
+        J2 & [Shoulder pitch]   & [Servo / motor type] & [X.X] & [X] \\
+        J3 & [Elbow pitch]      & [Servo / motor type] & [X.X] & [X] \\
+        J4 & [Wrist roll]       & [Servo / motor type] & [X.X] & [X] \\
+        J5 & [Wrist pitch]      & [Servo / motor type] & [X.X] & [X] \\
+        J6 & [End-effector]     & [Servo / motor type] & [X.X] & [X] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Electronics & Control --------------------------------------------------
+\paragraph{Electronics \& Control.}
+[Describe the arm controller board, motor drivers, feedback sensors (encoders,
+force/torque sensor, etc.), and communication interface with the main rover
+computer.]
+
+% ---- Software & Control Strategy --------------------------------------------
+\paragraph{Software \& Control Strategy.}
+[Describe the control architecture: inverse kinematics solver, trajectory
+planning, teleoperation interface, and any autonomous manipulation features.]
+
+% ---- Key Specifications Table -----------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Robotic arm key specifications}
+    \label{tab:arm_specs}
+    \begin{tabular}{L{5cm} L{7cm}}
+        \toprule
+        \textbf{Parameter}     & \textbf{Value / Description} \\
+        \midrule
+        Degrees of Freedom     & [N] \\
+        Maximum reach          & [XXX mm] \\
+        Payload capacity       & [X.X kg] \\
+        Total arm mass         & [X.X kg] \\
+        End-effector type      & [Gripper / Drill / ...] \\
+        Position repeatability & [$\pm$ X mm] \\
+        Control interface      & [ROS / custom] \\
+        \bottomrule
+    \end{tabular}
+\end{table}

@@ -1,0 +1,92 @@
+% =============================================================================
+% teams/ground_station/design.tex  -  Ground Station Team design contribution
+%
+% Filled in by: Ground Station Team
+% This file is included in sections/preliminary_design_description.tex
+% under Section 3.2 "Rover Design Description" > "Ground Station".
+% =============================================================================
+
+% ---- Overview ---------------------------------------------------------------
+\paragraph{Overview.}
+[Describe the ground station concept: operator workstation(s), antennas,
+communication hardware, and the software interface used to monitor and control
+the rover and drone.]
+
+% ---- Hardware ---------------------------------------------------------------
+\paragraph{Hardware.}
+[List and describe the ground station hardware: laptop/desktop computers,
+radio transceivers, antenna(e), antenna tracker (if used), video receivers,
+joysticks/gamepads, and any custom-built hardware.]
+
+\begin{table}[H]
+    \centering
+    \caption{Ground station hardware}
+    \label{tab:gs_hardware}
+    \begin{tabular}{L{4cm} L{2cm} L{6cm}}
+        \toprule
+        \textbf{Component}        & \textbf{Type} & \textbf{Description / Notes} \\
+        \midrule
+        Operator laptop           & COTS & [Model, specs] \\
+        Radio transceiver         & COTS & [Model, frequency, range] \\
+        Antenna(e)                & COTS / Custom & [Type, gain, frequency] \\
+        Antenna tracker           & Custom & [Description if used] \\
+        Video receiver            & COTS & [Model, frequency] \\
+        Operator input device(s)  & COTS & [Joystick / gamepad model] \\
+        % Add more rows as needed
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---- Software ---------------------------------------------------------------
+\paragraph{Software Architecture.}
+[Describe the ground control software: base framework used (ROS, Mission
+Planner, custom Qt / web app, etc.), displayed telemetry data, video feeds,
+map interface, and the operator's workflow during a task.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2.5cm}
+        [Insert ground station software screenshot or architecture diagram]\vspace{2.5cm}}}
+    \caption{Ground station software -- operator interface overview}
+    \label{fig:gs_software}
+\end{figure}
+
+% ---- Communication Architecture ---------------------------------------------
+\paragraph{Communication Architecture.}
+[Provide a block diagram or description of the complete communication chain
+from ground station to rover and drone. Include frequencies, protocols,
+encryption (if any), and link margin estimates.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2cm}
+        [Insert communication architecture block diagram here]\vspace{2cm}}}
+    \caption{Communication architecture -- overview}
+    \label{fig:gs_comms}
+\end{figure}
+
+% ---- RF Compliance ----------------------------------------------------------
+\paragraph{RF Compliance.}
+[State the radio frequencies planned for use, the applicable regulations
+(national / ERC rules), and confirm that a Preliminary RF Form has been
+submitted as a separate document.]
+
+% ---- Key Specifications Table -----------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Ground station key specifications}
+    \label{tab:gs_specs}
+    \begin{tabular}{L{5cm} L{7cm}}
+        \toprule
+        \textbf{Parameter}               & \textbf{Value / Description} \\
+        \midrule
+        Control link frequency           & [X.X GHz] \\
+        Video downlink frequency         & [X.X GHz] \\
+        Max.\ control link range         & [XXX m] \\
+        Antenna type (rover link)        & [Directional / Omni / Yagi] \\
+        Antenna gain (rover link)        & [X dBi] \\
+        Number of operators              & [N] \\
+        Ground station software          & [Name / version] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
