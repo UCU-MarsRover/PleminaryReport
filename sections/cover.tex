@@ -8,9 +8,15 @@
     \vspace*{2cm}
 
     % University / affiliation logo
-    \includegraphics[width=0.35\textwidth]{university_logo}   % replace with your logo file
+    \IfFileExists{university_logo.pdf}{%
+        \includegraphics[width=0.35\textwidth]{university_logo}% replace with your logo file
+    }{%
+        \fbox{\parbox[c][1.5cm][c]{0.35\textwidth}{\centering University logo}}%
+    }%
     \hfill
-    \includegraphics[width=0.20\textwidth]{erc_logo}          % ERC logo (optional)
+    \IfFileExists{erc_logo.pdf}{%
+        \includegraphics[width=0.20\textwidth]{erc_logo}% ERC logo (optional)
+    }{}%
 
     \vspace{1.5cm}
 
