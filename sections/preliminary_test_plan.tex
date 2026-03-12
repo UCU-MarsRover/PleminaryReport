@@ -1,0 +1,126 @@
+% =============================================================================
+% sections/preliminary_test_plan.tex  -  Section 2: Preliminary Test Plan
+%
+% SCORING: 0--25 pts
+%   Structure (0-5 pts):
+%     - All requirements verified by test mentioned          (0-1 pts)
+%     - Test ID, Name, Description provided                 (0-1 pts)
+%     - Test setup described                                (0-1 pts)
+%     - Pass/fail criteria and test status provided         (0-1 pts)
+%     - Tests timeline provided                             (0-1 pts)
+%   Technical excellence (0-20 pts)
+% =============================================================================
+
+\section{Preliminary Test Plan}
+\label{sec:test_plan}
+
+\subsection{Introduction}
+\label{subsec:tp_intro}
+
+This section presents the preliminary test plan for the \teamname\ rover and
+drone system. The purpose of the test plan is to verify that all requirements
+identified in Section~\ref{sec:moc} are satisfied before the competition.
+
+\subsection{Test Overview}
+\label{subsec:tp_overview}
+
+Table~\ref{tab:test_summary} summarises all tests planned for the
+verification campaign.
+
+\begin{table}[H]
+    \centering
+    \caption{Test overview summary}
+    \label{tab:test_summary}
+    \begin{tabular}{lc}
+        \toprule
+        \textbf{Category}        & \textbf{Number of tests} \\
+        \midrule
+        Rover mechanical tests   & [X] \\
+        Rover electrical tests   & [X] \\
+        Drone mechanical tests   & [X] \\
+        Drone electrical tests   & [X] \\
+        Software / integration tests & [X] \\
+        \midrule
+        \textbf{Total}           & [X] \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Test Descriptions}
+\label{subsec:tp_descriptions}
+
+Each test is described in Table~\ref{tab:test_plan}. The columns are:
+
+\begin{description}[style=nextline]
+    \item[Test ID] Unique identifier (e.g.\ T-01).
+    \item[Test Name] Short, descriptive name.
+    \item[Req. ID] Requirement(s) verified by this test (links to
+          Section~\ref{sec:moc}).
+    \item[Description] What the test involves and what is being measured.
+    \item[Test Setup] Equipment, environment, and configuration needed.
+    \item[Pass Criteria] Measurable condition(s) that must be met to pass.
+    \item[Status] \textit{Planned} / \textit{In Progress} / \textit{Pass} /
+          \textit{Fail}.
+\end{description}
+
+\begin{longtable}{C{0.8cm} L{2.2cm} C{1cm} L{2.8cm} L{2.8cm} L{2.2cm} C{1.2cm}}
+    \caption{Preliminary Test Plan}
+    \label{tab:test_plan} \\
+    \toprule
+    \textbf{ID} & \textbf{Test Name} & \textbf{Req.} & \textbf{Description}
+        & \textbf{Setup} & \textbf{Pass Criteria} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{7}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Test Name} & \textbf{Req.} & \textbf{Description}
+        & \textbf{Setup} & \textbf{Pass Criteria} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{7}{r}{\small\itshape (continued on next page)} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    % ---- Rover tests --------------------------------------------------------
+    T-01 & [Test name]  & R-01 & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
+    T-02 & [Test name]  & R-02 & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
+    % ---- Drone tests --------------------------------------------------------
+    T-10 & [Test name]  & R-0X & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
+    % Add all tests ...
+
+\end{longtable}
+
+\subsection{Test Timeline}
+\label{subsec:tp_timeline}
+
+Figure~\ref{fig:test_timeline} shows the planned schedule for the
+verification campaign leading up to ERC~2026.
+
+\begin{figure}[H]
+    \centering
+    % Replace with an actual Gantt chart or timeline figure
+    \fbox{\parbox{0.9\textwidth}{\centering\vspace{2cm}
+        [Insert test timeline / Gantt chart here]\vspace{2cm}}}
+    \caption{Preliminary test campaign timeline}
+    \label{fig:test_timeline}
+\end{figure}
+
+% Alternatively, use a table-based timeline:
+\begin{table}[H]
+    \centering
+    \caption{Test timeline (quarters / months)}
+    \label{tab:test_timeline}
+    \begin{tabular}{L{3cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm}}
+        \toprule
+        \textbf{Test}   & \textbf{Jan} & \textbf{Feb} & \textbf{Mar}
+                        & \textbf{Apr} & \textbf{May} \\
+        \midrule
+        T-01 [name]     & $\bullet$    &              &  &  & \\
+        T-02 [name]     &              & $\bullet$    &  &  & \\
+        T-10 [name]     &              &              & $\bullet$ &  & \\
+        % Add rows for each test
+        \bottomrule
+    \end{tabular}
+\end{table}

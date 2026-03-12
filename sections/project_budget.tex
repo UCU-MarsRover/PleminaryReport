@@ -1,0 +1,183 @@
+% =============================================================================
+% sections/project_budget.tex  -  Section 5: Project Budget
+%
+% SCORING: 0--27 pts
+%   Budget structure (0-6 pts):
+%     - Summary with expenditure status                     (0-1 pt)
+%     - Source of financial support                         (0-1 pt)
+%     - Rover major items with cost values                  (0-1 pt)
+%     - Drone major items with cost values                  (0-1 pt)
+%     - COTS vs. custom indication                          (0-1 pt)
+%     - Non-engineering costs provided                      (0-1 pt)
+%   Budget analysis (0-21 pts):
+%     - Quality and granularity                             (0-13 pts)
+%     - Budgetary prudence (custom-made, cost-effective)    (0-8 pts)
+% =============================================================================
+
+\section{Project Budget}
+\label{sec:budget}
+
+\subsection{Budget Summary}
+\label{subsec:budget_summary}
+
+Table~\ref{tab:budget_summary} provides a high-level summary of the project
+budget and current expenditure status.
+
+\begin{table}[H]
+    \centering
+    \caption{Budget summary}
+    \label{tab:budget_summary}
+    \begin{tabular}{L{5cm} R{2.5cm} R{2.5cm} R{2.5cm}}
+        \toprule
+        \textbf{Category}          & \textbf{Budget (EUR)} & \textbf{Spent (EUR)} & \textbf{Remaining (EUR)} \\
+        \midrule
+        Rover hardware             & [X,XXX] & [X,XXX] & [X,XXX] \\
+        Drone hardware             & [X,XXX] & [X,XXX] & [X,XXX] \\
+        Software / licences        & [X,XXX] & [X,XXX] & [X,XXX] \\
+        Manufacturing / machining  & [X,XXX] & [X,XXX] & [X,XXX] \\
+        Non-engineering costs      & [X,XXX] & [X,XXX] & [X,XXX] \\
+        Contingency (10\,\%)       & [X,XXX] & ---      & [X,XXX] \\
+        \midrule
+        \textbf{Total}             & \textbf{[X,XXX]} & \textbf{[X,XXX]} & \textbf{[X,XXX]} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Sources of Financial Support}
+\label{subsec:budget_sources}
+
+\begin{table}[H]
+    \centering
+    \caption{Sources of financial support}
+    \label{tab:budget_sources}
+    \begin{tabular}{L{5cm} R{2.5cm} L{5cm}}
+        \toprule
+        \textbf{Source}              & \textbf{Amount (EUR)} & \textbf{Notes} \\
+        \midrule
+        University grant             & [X,XXX] & \\
+        Sponsorship -- [Sponsor 1]   & [X,XXX] & \\
+        Sponsorship -- [Sponsor 2]   & [X,XXX] & \\
+        Team contributions           & [X,XXX] & \\
+        Other                        & [X,XXX] & \\
+        \midrule
+        \textbf{Total}               & \textbf{[X,XXX]} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Rover Detailed Budget}
+\label{subsec:rover_detailed_budget}
+
+Column \textbf{Type} indicates: \textbf{COTS} -- component off the shelf,
+\textbf{Custom} -- team-manufactured item.
+
+\begin{longtable}{C{0.7cm} L{3.5cm} C{1.2cm} C{1.2cm} R{1.8cm} R{2cm} L{2cm}}
+    \caption{Rover major items budget}
+    \label{tab:rover_items} \\
+    \toprule
+    \textbf{ID} & \textbf{Item / Component} & \textbf{Subsystem} & \textbf{Type}
+        & \textbf{Unit cost (EUR)} & \textbf{Total cost (EUR)} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{7}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Item / Component} & \textbf{Subsystem} & \textbf{Type}
+        & \textbf{Unit cost (EUR)} & \textbf{Total cost (EUR)} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    % Chassis / Suspension
+    BR-01 & [Chassis frame]        & Suspension  & Custom & [X.XX] & [X.XX] & Planned \\
+    BR-02 & [Wheel (×6)]           & Suspension  & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BR-03 & [Drive motor (×6)]     & Suspension  & COTS   & [X.XX] & [X.XX] & Ordered \\
+    % Arm
+    BR-10 & [Arm servo (×N)]       & Arm         & COTS   & [X.XX] & [X.XX] & Planned \\
+    BR-11 & [Arm structural parts] & Arm         & Custom & [X.XX] & [X.XX] & Planned \\
+    % Science
+    BR-20 & [Science sensor]       & Science     & COTS   & [X.XX] & [X.XX] & Planned \\
+    % Electronics
+    BR-30 & [Main computer]        & Electronics & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BR-31 & [Battery pack]         & Electronics & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BR-32 & [PCB (custom)]         & Electronics & Custom & [X.XX] & [X.XX] & Design \\
+    % Navigation
+    BR-40 & [Camera]               & Navigation  & COTS   & [X.XX] & [X.XX] & Planned \\
+    BR-41 & [GPS module]           & Navigation  & COTS   & [X.XX] & [X.XX] & Planned \\
+    % Ground station
+    BR-50 & [Radio module]         & GS          & COTS   & [X.XX] & [X.XX] & Ordered \\
+    % Add all items ...
+    \midrule
+    \multicolumn{5}{r}{\textbf{Rover subtotal}} & \textbf{[X,XXX]} & \\
+
+\end{longtable}
+
+\subsection{Drone Detailed Budget}
+\label{subsec:drone_detailed_budget}
+
+\begin{longtable}{C{0.7cm} L{4cm} C{1.2cm} R{1.8cm} R{2cm} L{2cm}}
+    \caption{Drone major items budget}
+    \label{tab:drone_items} \\
+    \toprule
+    \textbf{ID} & \textbf{Item / Component} & \textbf{Type}
+        & \textbf{Unit cost (EUR)} & \textbf{Total cost (EUR)} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{6}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Item / Component} & \textbf{Type}
+        & \textbf{Unit cost (EUR)} & \textbf{Total cost (EUR)} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    BD-01 & [Frame / structure]      & Custom & [X.XX] & [X.XX] & Planned \\
+    BD-02 & [Motor (×N)]             & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BD-03 & [Propeller (×N)]         & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BD-04 & [Flight controller]      & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BD-05 & [Battery (LiPo)]         & COTS   & [X.XX] & [X.XX] & Ordered \\
+    BD-06 & [Camera / payload]       & COTS   & [X.XX] & [X.XX] & Planned \\
+    BD-07 & [Radio / telemetry link] & COTS   & [X.XX] & [X.XX] & Planned \\
+    % Add all items ...
+    \midrule
+    \multicolumn{4}{r}{\textbf{Drone subtotal}} & \textbf{[X,XXX]} & \\
+
+\end{longtable}
+
+\subsection{Non-Engineering Costs}
+\label{subsec:non_eng_costs}
+
+\begin{table}[H]
+    \centering
+    \caption{Non-engineering costs}
+    \label{tab:non_eng}
+    \begin{tabular}{L{5cm} R{2.5cm} L{4cm}}
+        \toprule
+        \textbf{Item}                      & \textbf{Cost (EUR)} & \textbf{Notes} \\
+        \midrule
+        Travel to competition              & [X,XXX] & flights, train \\
+        Accommodation                      & [X,XXX] & hotel / hostel \\
+        Shipping of rover and equipment    & [X,XXX] & freight \\
+        Team merchandise / uniforms        & [X,XXX] & \\
+        Registration / entry fee           & [X,XXX] & \\
+        Miscellaneous                      & [X,XXX] & \\
+        \midrule
+        \textbf{Total non-engineering}     & \textbf{[X,XXX]} & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Budget Analysis}
+\label{subsec:budget_analysis}
+
+[Provide a narrative analysis of the budget. Discuss:
+\begin{itemize}
+    \item The rationale behind the budget allocation between subsystems.
+    \item The balance between COTS and custom-made components and how this
+          reflects on cost efficiency.
+    \item Prudence measures taken (e.g.\ reusing existing components,
+          negotiating with sponsors, using open-source software).
+    \item Contingency planning and reserve budget.
+\end{itemize}
+]

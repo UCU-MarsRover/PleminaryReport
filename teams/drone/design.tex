@@ -1,0 +1,76 @@
+% =============================================================================
+% teams/drone/design.tex  -  Drone Team design contribution
+%
+% Filled in by: Drone Team
+% This file is included in sections/preliminary_design_description.tex
+% under Section 3.3 "Drone Design Description".
+%
+% NOTE: If the drone is fully COTS, drone design excellence scores 0 pts.
+% =============================================================================
+
+% ---- Overview ---------------------------------------------------------------
+\paragraph{Overview.}
+[Provide a short description of the drone concept: type (multirotor / fixed-wing
+/ hybrid), main mission objectives (aerial reconnaissance, mapping, etc.) and
+key design drivers.]
+
+% ---- Concept of operations --------------------------------------------------
+\paragraph{Concept of Operations.}
+[Describe how the drone is used during the competition tasks: take-off
+procedure, flight modes (manual / autonomous), interaction with the rover,
+landing, etc.]
+
+% ---- Mechanical Design ------------------------------------------------------
+\paragraph{Mechanical Design.}
+[Describe the frame, propulsion system (motors, propellers, ESCs), payload
+mounting, material choices. Include a figure or CAD rendering if available.]
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}
+        [Insert drone CAD / photo here]\vspace{2cm}}}
+    \caption{Drone -- mechanical overview}
+    \label{fig:drone_mech}
+\end{figure}
+
+% ---- Electronics & Avionics -------------------------------------------------
+\paragraph{Electronics \& Avionics.}
+[Describe the flight controller, companion computer (if any), sensors (IMU,
+barometer, GPS, optical flow, etc.), battery management system, and wiring
+architecture.]
+
+% ---- Communication ----------------------------------------------------------
+\paragraph{Communication System.}
+[Describe the drone communication links: frequencies used, hardware (radio
+modules), range, and how RF interference is mitigated. Reference the RF Form.]
+
+% ---- Software & Autonomy ----------------------------------------------------
+\paragraph{Software \& Autonomy.}
+[Describe the flight software stack (e.g.\ ArduPilot, PX4), any custom
+autopilot modules, autonomous navigation algorithms, and ground control station
+software used for the drone.]
+
+% ---- Key Specifications Table -----------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Drone key specifications}
+    \label{tab:drone_specs}
+    \begin{tabular}{L{5cm} L{7cm}}
+        \toprule
+        \textbf{Parameter}            & \textbf{Value / Description} \\
+        \midrule
+        Type                          & [Quadrotor / Hexarotor / Fixed-wing / ...] \\
+        Frame size (diagonal)         & [XXX mm] \\
+        Total mass (take-off)         & [X.X kg] \\
+        Payload capacity              & [X.X kg] \\
+        Max.\ flight time             & [XX min] \\
+        Max.\ speed                   & [XX m/s] \\
+        Max.\ operational altitude    & [XX m AGL] \\
+        Flight controller             & [Brand / model] \\
+        Battery                       & [S / capacity mAh] \\
+        Primary communication link    & [Frequency, hardware] \\
+        Positioning system            & [GPS / GNSS / optical flow] \\
+        COTS / Custom                 & [Fully COTS / Partially custom / Fully custom] \\
+        \bottomrule
+    \end{tabular}
+\end{table}

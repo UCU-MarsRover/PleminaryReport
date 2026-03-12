@@ -1,0 +1,71 @@
+% =============================================================================
+% main.tex  -  European Rover Challenge 2026 Preliminary Report
+%
+% USAGE:
+%   1. Fill in your team name and project name below.
+%   2. Replace all placeholder text in each section file under sections/ and
+%      teams/ with your actual content.
+%   3. Compile with:  pdflatex main.tex  (run twice for references/TOC)
+%      or:            latexmk -pdf main.tex
+%
+% FILE NAMING (as per ERC Rules):
+%   <TeamName>_PreliminaryReport_ERC2026.pdf
+% =============================================================================
+
+\documentclass[10pt,a4paper]{article}
+
+% ---- Team / project identifiers (edit these) --------------------------------
+\newcommand{\teamname}{UCU Mars Rover}       % <-- Your team name
+\newcommand{\projectname}{Rover \& Drone System} % <-- Your project name
+\newcommand{\submissiondate}{\today}         % <-- or e.g. {1 April 2026}
+\newcommand{\revisionnum}{1.0}
+
+% ---- Load shared preamble ---------------------------------------------------
+\input{preamble}
+
+% =============================================================================
+\begin{document}
+
+% --- Cover page (no page number) ---------------------------------------------
+\input{sections/cover}
+
+% --- Table of Contents -------------------------------------------------------
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+% --- Main sections -----------------------------------------------------------
+\input{sections/matrix_of_compliance}
+
+\input{sections/preliminary_test_plan}
+
+\input{sections/preliminary_design_description}
+
+\input{sections/rio_analysis}
+
+\input{sections/project_budget}
+
+% --- Appendices --------------------------------------------------------------
+\appendix
+\section*{Appendices}
+\addcontentsline{toc}{section}{Appendices}
+
+% Appendix A: Additional Drawings / Charts
+% (Only include content that could not fit in the main document.
+%  Appendices count toward the 30-page limit.)
+\subsection*{Appendix A -- Additional Drawings and Charts}
+\label{app:drawings}
+% Add content here if needed.
+
+% Appendix B: Scoring Reference (from ERC template -- remove in final version)
+% \subsection*{Appendix B -- Scoring}
+% \label{app:scoring}
+
+% Appendix C: Requirements Table
+\subsection*{Appendix C -- Requirements Table}
+\label{app:requirements}
+% Insert full requirements table here.
+
+\end{document}

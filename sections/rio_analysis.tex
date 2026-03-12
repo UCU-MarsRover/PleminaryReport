@@ -1,0 +1,152 @@
+% =============================================================================
+% sections/rio_analysis.tex  -  Section 4: RIO Analysis
+%
+% SCORING: 0--25 pts
+%   Qualitative assessment (0-10 pts):
+%     - Methodology described                               (0-1 pt)
+%     - Risk ID, title, risk owner                          (0-1 pt)
+%     - Risk root cause indicated                           (0-1 pt)
+%     - Risk impact described                               (0-1 pt)
+%     - Likelihood, Severity, Risk Level (RI) estimated     (0-1 pt)
+%     - Risk response strategy picked                       (0-1 pt)
+%     - Mitigation action(s) listed                         (0-1 pt)
+%     - Risk status                                         (0-1 pt)
+%     - Opportunities mentioned                             (0-1 pt)
+%     - Issues mentioned                                    (0-1 pt)
+%   Quality of the analysis (0-15 pts)
+%
+% RULES:
+%   - Max 10 risks (highest Risk Index values only)
+%   - Max 5 opportunities
+%   - Max 5 issues
+% =============================================================================
+
+\section{RIO Analysis}
+\label{sec:rio}
+
+\subsection{Methodology}
+\label{subsec:rio_method}
+
+The risk identification and assessment process follows a standard qualitative
+risk management approach. Each risk is characterised by a \textbf{Likelihood}
+(L) and a \textbf{Severity} (S), both scored on a 1--5 scale (Table~\ref{tab:rio_scales}).
+The \textbf{Risk Index} (RI) is defined as:
+\[
+    \mathrm{RI} = L \times S
+\]
+Based on RI, risks are classified as:
+\begin{itemize}[nosep]
+    \item \riskhigh{} \quad RI $\geq$ 15
+    \item \riskmedium{} \quad 6 $\leq$ RI $<$ 15
+    \item \risklow{} \quad RI $<$ 6
+\end{itemize}
+
+Response strategies used: \textit{Accept}, \textit{Mitigate},
+\textit{Transfer}, \textit{Avoid}.
+
+\begin{table}[H]
+    \centering
+    \caption{Likelihood and Severity scales}
+    \label{tab:rio_scales}
+    \begin{tabular}{C{1cm} L{3.5cm} | C{1cm} L{3.5cm}}
+        \toprule
+        \multicolumn{2}{c|}{\textbf{Likelihood (L)}} & \multicolumn{2}{c}{\textbf{Severity (S)}} \\
+        \midrule
+        1 & Rare        & 1 & Negligible \\
+        2 & Unlikely    & 2 & Minor \\
+        3 & Possible    & 3 & Moderate \\
+        4 & Likely      & 4 & Major \\
+        5 & Almost certain & 5 & Catastrophic \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% =============================================================================
+\subsection{Qualitative Risks Assessment (top 10 by Risk Index)}
+\label{subsec:risks}
+
+Table~\ref{tab:risks} presents the top~10 risks ranked by Risk Index.
+
+\begin{longtable}{C{0.7cm} L{2.5cm} L{2cm} L{2cm} L{2.5cm} C{0.6cm} C{0.6cm} C{0.6cm} L{2cm} L{2.5cm} L{1.5cm}}
+    \caption{Risk register (top 10)}
+    \label{tab:risks} \\
+    \toprule
+    \textbf{ID} & \textbf{Risk Title} & \textbf{Owner} & \textbf{Root Cause}
+        & \textbf{Impact} & \textbf{L} & \textbf{S} & \textbf{RI}
+        & \textbf{Response} & \textbf{Mitigation} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{11}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Risk Title} & \textbf{Owner} & \textbf{Root Cause}
+        & \textbf{Impact} & \textbf{L} & \textbf{S} & \textbf{RI}
+        & \textbf{Response} & \textbf{Mitigation} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    % ---- Template rows -- replace with actual risks -------------------------
+    R-01 & [Risk title] & [Owner] & [Root cause description]
+         & [Impact on project / system] & [1-5] & [1-5] & \cellcolor{red!40}[RI]
+         & Mitigate & [Mitigation action(s)] & Open \\[4pt]
+
+    R-02 & [Risk title] & [Owner] & [Root cause description]
+         & [Impact on project / system] & [1-5] & [1-5] & \cellcolor{orange!40}[RI]
+         & Mitigate & [Mitigation action(s)] & Open \\[4pt]
+
+    R-03 & [Risk title] & [Owner] & [Root cause description]
+         & [Impact on project / system] & [1-5] & [1-5] & \cellcolor{orange!40}[RI]
+         & Accept & [Mitigation action(s)] & Open \\[4pt]
+
+    R-04 & [Risk title] & [Owner] & [Root cause description]
+         & [Impact on project / system] & [1-5] & [1-5] & \cellcolor{green!30}[RI]
+         & Accept & [Mitigation action(s)] & Open \\[4pt]
+
+    R-05 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+    R-06 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+    R-07 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+    R-08 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+    R-09 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+    R-10 & [Risk title] & [Owner] & [Root cause] & [Impact] & [1-5] & [1-5] & [RI] & [Strategy] & [Actions] & Open \\[4pt]
+
+\end{longtable}
+
+% =============================================================================
+\subsection{Opportunities (max 5)}
+\label{subsec:opportunities}
+
+\begin{table}[H]
+    \centering
+    \caption{Opportunities register}
+    \label{tab:opportunities}
+    \begin{tabular}{C{0.7cm} L{3cm} L{2cm} L{5cm} L{3cm}}
+        \toprule
+        \textbf{ID} & \textbf{Opportunity} & \textbf{Owner} & \textbf{Description / Benefit} & \textbf{Action} \\
+        \midrule
+        O-01 & [Title] & [Owner] & [Description of opportunity and its benefit] & [Planned action] \\
+        O-02 & [Title] & [Owner] & [Description of opportunity and its benefit] & [Planned action] \\
+        O-03 & [Title] & [Owner] & [Description of opportunity and its benefit] & [Planned action] \\
+        % Add up to 5 opportunities
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% =============================================================================
+\subsection{Issues (max 5)}
+\label{subsec:issues}
+
+\begin{table}[H]
+    \centering
+    \caption{Issues register}
+    \label{tab:issues}
+    \begin{tabular}{C{0.7cm} L{3cm} L{2cm} L{4cm} L{3cm} L{1.5cm}}
+        \toprule
+        \textbf{ID} & \textbf{Issue} & \textbf{Owner} & \textbf{Description / Impact} & \textbf{Action} & \textbf{Status} \\
+        \midrule
+        I-01 & [Title] & [Owner] & [Description and impact on project] & [Action plan] & Open \\
+        I-02 & [Title] & [Owner] & [Description and impact on project] & [Action plan] & Open \\
+        % Add up to 5 issues
+        \bottomrule
+    \end{tabular}
+\end{table}
