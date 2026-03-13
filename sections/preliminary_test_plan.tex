@@ -63,7 +63,19 @@ Each test is described in Table~\ref{tab:test_plan}. The columns are:
           \textit{Fail}.
 \end{description}
 
-\begin{longtable}{C{0.8cm} L{2.2cm} C{1cm} L{2.8cm} L{2.8cm} L{2.2cm} C{1.2cm}}
+To simplify collaboration, test rows are maintained in team-owned files under
+\texttt{teams/*/tests.tex} and then assembled into one master table below.
+
+% Load team-owned test row macros.
+\input{teams/suspension/tests}
+\input{teams/arm/tests}
+\input{teams/science/tests}
+\input{teams/navigation/tests}
+\input{teams/electronics/tests}
+\input{teams/ground_station/tests}
+\input{teams/drone/tests}
+
+\begin{longtable}{C{0.95cm} L{2.0cm} C{1cm} L{2.55cm} L{2.55cm} L{2.05cm} C{1.6cm}}
     \caption{Preliminary Test Plan}
     \label{tab:test_plan} \\
     \toprule
@@ -83,12 +95,26 @@ Each test is described in Table~\ref{tab:test_plan}. The columns are:
     \bottomrule
     \endlastfoot
 
-    % ---- Rover tests --------------------------------------------------------
-    T-01 & [Test name]  & R-01 & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
-    T-02 & [Test name]  & R-02 & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
-    % ---- Drone tests --------------------------------------------------------
-    T-10 & [Test name]  & R-0X & [Description of the test] & [Equipment / environment] & [Measurable criterion] & Planned \\
-    % Add all tests ...
+    \multicolumn{7}{l}{\textbf{Suspension Team}} \\
+    \suspensiontestrows
+
+    \multicolumn{7}{l}{\textbf{Robotic Arm Team}} \\
+    \armtestrows
+
+    \multicolumn{7}{l}{\textbf{Science Team}} \\
+    \sciencetestrows
+
+    \multicolumn{7}{l}{\textbf{Navigation Team}} \\
+    \navigationtestrows
+
+    \multicolumn{7}{l}{\textbf{General Electronics Team}} \\
+    \electronicstestrows
+
+    \multicolumn{7}{l}{\textbf{Ground Station Team}} \\
+    \groundstationtestrows
+
+    \multicolumn{7}{l}{\textbf{Drone Team}} \\
+    \dronetestrows
 
 \end{longtable}
 
