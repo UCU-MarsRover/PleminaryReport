@@ -13,6 +13,8 @@
 *.synctex.gz
 *.toc
 *.xdv
+*.pdf
+*.atfi
 
 # Output PDF (comment out if you want to track the compiled PDF)
 # main.pdf
