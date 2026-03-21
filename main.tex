@@ -2,13 +2,11 @@
 % main.tex  -  European Rover Challenge 2026 Preliminary Report
 %
 % USAGE:
-%   1. Fill in your team name and project name below.
-%   2. Replace all placeholder text in each section file under sections/ and
-%      teams/ with your actual content.
-%   3. Compile with:  pdflatex main.tex  (run twice for references/TOC)
-%      or:            latexmk -pdf main.tex
+%   1. Fill in your team metadata below.
+%   2. Replace all placeholder text in sections/ and teams/ files.
+%   3. Compile:  latexmk -pdf main.tex
 %
-% FILE NAMING (as per ERC Rules):
+% FILE NAMING (ERC Rules):
 %   <TeamName>_PreliminaryReport_ERC2026.pdf
 % =============================================================================
 
@@ -16,6 +14,8 @@
 
 % ---- Team / project identifiers (edit these) --------------------------------
 \newcommand{\teamname}{UCU Mars Rover}
+\newcommand{\projectname}{Indomitus}
+\newcommand{\affiliation}{Ukrainian Catholic University}
 \newcommand{\submissiondate}{\today}
 \newcommand{\revisionnum}{1.0}
 
@@ -31,8 +31,6 @@
 % --- Table of Contents -------------------------------------------------------
 \newpage
 \tableofcontents
-\listoffigures
-\listoftables
 \newpage
 
 % --- Main sections -----------------------------------------------------------
@@ -51,20 +49,12 @@
 \section*{Appendices}
 \addcontentsline{toc}{section}{Appendices}
 
-% Appendix A: Additional Drawings / Charts
-% (Only include content that could not fit in the main document.
-%  Appendices count toward the 30-page limit.)
 \subsection*{Appendix A -- Additional Drawings and Charts}
 \label{app:drawings}
-% Add content here if needed.
+% Add large diagrams or drawings that could not fit in the main document.
 
-% Appendix B: Scoring Reference (from ERC template -- remove in final version)
-% \subsection*{Appendix B -- Scoring}
-% \label{app:scoring}
-
-% Appendix C: Requirements Table
-\subsection*{Appendix C -- Requirements Table}
+\subsection*{Appendix B -- Requirements Table}
 \label{app:requirements}
-% Insert full requirements table here.
+\input{appendix/requirements}
 
 \end{document}

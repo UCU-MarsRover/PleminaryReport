@@ -1,0 +1,85 @@
+% =============================================================================
+% tables/rio_table.tex
+%
+% HOW TO USE:
+%   Fill in the rows below. Max 10 risks, 5 opportunities, 5 issues.
+%   Use \riskhigh, \riskmedium, \risklow commands for the RI cell color.
+%   Risk Index (RI) = Likelihood × Severity
+% =============================================================================
+
+% --- RISKS (max 10, sorted by RI descending) ---------------------------------
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{C{0.6cm} L{1.8cm} L{1.3cm} L{1.4cm} L{1.8cm} C{0.5cm} C{0.5cm} C{0.6cm} L{1.5cm} L{1.8cm} L{1.1cm}}
+    \caption{Risk register (top 10 by Risk Index)}
+    \label{tab:risks} \\
+    \toprule
+    \textbf{ID} & \textbf{Risk Title} & \textbf{Owner} & \textbf{Root Cause}
+        & \textbf{Impact} & \textbf{L} & \textbf{S} & \textbf{RI}
+        & \textbf{Response} & \textbf{Mitigation} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{ID} & \textbf{Risk Title} & \textbf{Owner} & \textbf{Root Cause}
+        & \textbf{Impact} & \textbf{L} & \textbf{S} & \textbf{RI}
+        & \textbf{Response} & \textbf{Mitigation} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    % ---- Add your risks below (highest RI first) ----------------------------
+    % Template row — copy and fill in:
+    %
+    % R-01 & [Title] & [Owner] & [Root cause] & [Impact description]
+    %      & [1-5] & [1-5] & \cellcolor{red!40}[RI]
+    %      & Mitigate & [Actions] & Open \\[4pt]
+    %
+    % RI colour guide:
+    %   \cellcolor{red!40}    — High   (RI >= 15)
+    %   \cellcolor{orange!40} — Medium (RI 6–14)
+    %   \cellcolor{green!30}  — Low    (RI <= 5)
+
+    R-01 & & & & & & & & & & \\[4pt]
+    R-02 & & & & & & & & & & \\[4pt]
+    R-03 & & & & & & & & & & \\[4pt]
+    R-04 & & & & & & & & & & \\[4pt]
+    R-05 & & & & & & & & & & \\[4pt]
+    R-06 & & & & & & & & & & \\[4pt]
+    R-07 & & & & & & & & & & \\[4pt]
+    R-08 & & & & & & & & & & \\[4pt]
+    R-09 & & & & & & & & & & \\[4pt]
+    R-10 & & & & & & & & & & \\[4pt]
+
+\end{longtable}
+\setlength{\tabcolsep}{6pt}
+
+% --- OPPORTUNITIES (max 5) ---------------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Opportunities register (max 5)}
+    \label{tab:opportunities}
+    \begin{tabular}{C{0.7cm} L{3cm} L{2cm} L{5cm} L{3cm}}
+        \toprule
+        \textbf{ID} & \textbf{Title} & \textbf{Owner} & \textbf{Description / Benefit} & \textbf{Action} \\
+        \midrule
+        O-01 & & & & \\
+        O-02 & & & & \\
+        O-03 & & & & \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% --- ISSUES (max 5) ----------------------------------------------------------
+\begin{table}[H]
+    \centering
+    \caption{Issues register (max 5)}
+    \label{tab:issues}
+    \begin{tabular}{C{0.7cm} L{3cm} L{2cm} L{4cm} L{3cm} L{1.5cm}}
+        \toprule
+        \textbf{ID} & \textbf{Issue} & \textbf{Owner} & \textbf{Description / Impact} & \textbf{Action} & \textbf{Status} \\
+        \midrule
+        I-01 & & & & & Open \\
+        I-02 & & & & & Open \\
+        \bottomrule
+    \end{tabular}
+\end{table}

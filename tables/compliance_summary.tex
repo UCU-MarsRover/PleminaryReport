@@ -1,0 +1,28 @@
+% =============================================================================
+% tables/compliance_summary.tex
+%
+% HOW TO USE:
+%   Fill in the counts after you complete the MoC .xlsx file.
+%   C  = Compliant       (requirement will be fully met by final design)
+%   PC = Partially Compliant
+%   NC = Non-Compliant
+%   N/A = Not Applicable
+% =============================================================================
+
+\begin{table}[H]
+    \centering
+    \caption{Compliance status summary}
+    \label{tab:moc_summary}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Status} & \textbf{Symbol} & \textbf{Count} \\
+        \midrule
+        Compliant             & \compliant{}         & [X] \\
+        Partially Compliant   & \partlycompliant{}   & [X] \\
+        Non-Compliant         & \noncompliant{}      & [X] \\
+        Not Applicable        & \notapplicable{}     & [X] \\
+        \midrule
+        \textbf{Total requirements} &               & [X] \\
+        \bottomrule
+    \end{tabular}
+\end{table}

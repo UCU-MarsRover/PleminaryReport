@@ -1,0 +1,51 @@
+% =============================================================================
+% tables/test_plan.tex
+%
+% HOW TO USE:
+%   This file defines the master test table structure.
+%   Each team defines their own \XXXtestrows macro in teams/*/tests.tex.
+%   Do NOT add rows directly here — edit your team's tests.tex file.
+% =============================================================================
+
+\begin{longtable}{C{0.95cm} L{2.0cm} C{1cm} L{2.55cm} L{2.55cm} L{2.05cm} C{1.6cm}}
+    \caption{Preliminary Test Plan}
+    \label{tab:test_plan} \\
+    \toprule
+    \textbf{ID} & \textbf{Test Name} & \textbf{Req.} & \textbf{Description \& Setup}
+        & \textbf{Pass Criteria} & \textbf{Timeline} & \textbf{Status} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{7}{c}{\small\itshape (continued from previous page)} \\
+    \toprule
+    \textbf{ID} & \textbf{Test Name} & \textbf{Req.} & \textbf{Description \& Setup}
+        & \textbf{Pass Criteria} & \textbf{Timeline} & \textbf{Status} \\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{7}{r}{\small\itshape (continued on next page)} \\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    \multicolumn{7}{l}{\textbf{Suspension Team}} \\
+    \suspensiontestrows
+
+    \multicolumn{7}{l}{\textbf{Robotic Arm Team}} \\
+    \armtestrows
+
+    \multicolumn{7}{l}{\textbf{Science Team}} \\
+    \sciencetestrows
+
+    \multicolumn{7}{l}{\textbf{Navigation Team}} \\
+    \navigationtestrows
+
+    \multicolumn{7}{l}{\textbf{General Electronics Team}} \\
+    \electronicstestrows
+
+    \multicolumn{7}{l}{\textbf{Ground Station Team}} \\
+    \groundstationtestrows
+
+    \multicolumn{7}{l}{\textbf{Drone Team}} \\
+    \dronetestrows
+
+\end{longtable}
