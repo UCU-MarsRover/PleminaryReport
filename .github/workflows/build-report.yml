@@ -1,0 +1,46 @@
+name: Build Preliminary Report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_lualatex: false
+          latexmk_shell_escape: false
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PreliminaryReport-${{ github.sha }}
+          path: main.pdf
+          retention-days: 90
+
+      - name: Create Release with PDF
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: report-${{ github.run_number }}
+          name: "Preliminary Report — build #${{ github.run_number }}"
+          body: |
+            Автоматично зкомпільований звіт.
+            Commit: ${{ github.sha }}
+            Дата: ${{ github.event.head_commit.timestamp }}
+          files: main.pdf
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
