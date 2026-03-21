@@ -4,7 +4,6 @@ LaTeX template for the **European Rover Challenge 2026 Preliminary Report**.
 
 ---
 
-
 ## DIAGRAMS STANDARDS
 
 **Всі стандарти** описані у `DIAGRAM_STANDARDS.md`
