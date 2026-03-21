@@ -23,24 +23,19 @@ jobs:
           latexmk_shell_escape: false
           args: -pdf -interaction=nonstopmode -halt-on-error
 
-      - name: Upload PDF artifact
+      - name: Upload PDF (latest)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
-          name: PreliminaryReport-${{ github.sha }}
+          name: PreliminaryReport-latest
           path: main.pdf
           retention-days: 90
+          overwrite: true
 
-      - name: Create Release with PDF
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: softprops/action-gh-release@v2
+      - name: Upload PDF (PR preview)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: report-${{ github.run_number }}
-          name: "Preliminary Report — build #${{ github.run_number }}"
-          body: |
-            Автоматично зкомпільований звіт.
-            Commit: ${{ github.sha }}
-            Дата: ${{ github.event.head_commit.timestamp }}
-          files: main.pdf
-          make_latest: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: PreliminaryReport-PR-${{ github.event.number }}
+          path: main.pdf
+          retention-days: 30
