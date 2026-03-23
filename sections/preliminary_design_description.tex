@@ -1,17 +1,5 @@
 % =============================================================================
 % sections/preliminary_design_description.tex  -  Section 3: Design Description
-%
-% SCORING: 0--48 pts
-%   Structure (0-8 pts):
-%     - Product Trees / Physical Breakdown Structures        (0-2 pts)
-%     - Rover design description                             (0-1 pts)
-%     - Rover technical budget (mass, power, data link)      (0-1 pts)
-%     - Rover safety system description                      (0-1 pts)
-%     - Drone design description                             (0-1 pts)
-%     - Drone technical budget (mass, power, data link)      (0-1 pts)
-%     - Drone safety system description                      (0-1 pts)
-%   Rover design excellence (0-25 pts)
-%   Drone design excellence (0-15 pts; 0 if fully COTS drone)
 % =============================================================================
 
 \section{Preliminary Design Description}
@@ -20,86 +8,122 @@
 This section is split into one file per subsection to minimize merge conflicts
 and enable one-PR-per-subsection collaboration.
 
-\subsection{Introduction}
-\input{sections/design/1_1_purpose_scope_conventions}
-\input{sections/design/1_2_team_institution_overview}
-\input{sections/design/1_3_abbreviations_terminology}
+\subsection{Product Trees / Physical Breakdown Structures}
+\textit{Owner: Electronics Team}
 
-\subsection{System Architecture}
-\input{sections/design/2_1_product_tree}
-\input{sections/design/2_2_electrical_block_diagram_interfaces}
-\input{sections/design/2_3_microcontrollers_peripherals_overview}
-\input{sections/design/2_4_intercomponent_protocols}
-\input{sections/design/2_5_system_redundancy_strategy}
+\input{sections/design/1_1_1_rover_product_tree}
+\input{sections/design/1_1_2_drone_product_tree}
 
-\subsection{Mechanical Design}
-\input{sections/design/3_1_chassis_configuration_geometry}
-\input{sections/design/3_2_locomotion_wheel_design}
-\input{sections/design/3_3_turning_radius_steering_kinematics}
-\input{sections/design/3_4_manipulator_arm_design}
-\input{sections/design/3_5_sample_storage_weighing_system}
-\input{sections/design/3_6_drill_system_mechanical_design}
-\input{sections/design/3_7_uav_platform_landing_pad_design}
+\subsection{Rover Design Description}
 
-\subsection{Electrical Power Subsystem}
-\input{sections/design/4_1_battery_hotswap_design}
-\input{sections/design/4_2_energy_budget_60min_estimate}
+\subsubsection{Mechanical Design}
+\textit{Owner: Suspension Team + Arm Team + Science Team}
 
-\subsection{Communication Subsystem}
-\input{sections/design/5_1_communication_architecture_overview}
-\input{sections/design/5_2_frequency_plan}
-\input{sections/design/5_3_antenna_design_placement}
-\input{sections/design/5_4_interference_mitigation}
-\input{sections/design/5_5_link_performance_analysis}
-\input{sections/design/5_6_drone_rf_architecture_nlos}
-\input{sections/design/5_7_communication_redundancy}
-\input{sections/design/5_8_bandwidth_management}
+\input{sections/design/2_1_1_chassis_configuration_geometry}
+\input{sections/design/2_1_2_locomotion_wheel_design}
+\input{sections/design/2_1_3_turning_radius_steering_kinematics}
+\input{sections/design/2_1_4_manipulator_configuration_kinematics}
+\input{sections/design/2_1_5_joint_design_actuators}
+\input{sections/design/2_1_6_end_effector_design}
+\input{sections/design/2_1_7_sample_storage_weighing_system}
+\input{sections/design/2_1_8_drill_system_implementation}
 
-\subsection{On-Board Computing and Sensors}
-\input{sections/design/6_1_computing_architecture_jetson}
-\input{sections/design/6_2_drone_avionics_companion}
-\input{sections/design/6_3_localization_odometry_sensors}
-\input{sections/design/6_4_perception_obstacle_sensors}
-\input{sections/design/6_5_rover_camera_suite}
-\input{sections/design/6_6_drone_perception_gnss_denied}
-\input{sections/design/6_7_science_sensors}
+\subsubsection{Electrical Power Subsystem}
+\textit{Owner: Electronics Team}
 
-\subsection{Software Architecture}
-\input{sections/design/7_1_software_system_overview}
-\input{sections/design/7_2_state_estimation_localization}
-\input{sections/design/7_3_path_planning_autonomy}
-\input{sections/design/7_4_collision_avoidance_rover}
-\input{sections/design/7_5_drone_autonomy_collision}
-\input{sections/design/7_6_science_transfer_protocol}
-\input{sections/design/7_7_ground_station_software}
+\input{sections/design/2_2_1_battery_hotswap_design}
+\input{sections/design/2_2_2_power_distribution_regulation}
+\input{sections/design/2_2_3_intercomponent_protocols_mc_peripherals}
 
-\subsection{Safety Systems}
-\input{sections/design/8_1_physical_estop}
-\input{sections/design/8_2_rf_remote_estop}
-\input{sections/design/8_3_activity_indicator}
-\input{sections/design/8_4_preactivity_delay_enforcement}
-\input{sections/design/8_5_human_detection_system}
-\input{sections/design/8_6_drone_failsafe_visual_signaling}
-\input{sections/design/8_7_flight_ops_regulatory}
+\subsubsection{Communication Subsystem}
+\textit{Owner: Ground Station Team}
 
-\subsection{Science}
-\input{sections/design/9_1_scientific_documentation_framework}
-\input{sections/design/9_2_astrobiological_protocols}
+\input{sections/design/2_3_1_communication_architecture_overview}
+\input{sections/design/2_3_2_frequency_plan}
+\input{sections/design/2_3_3_antenna_design_placement}
+\input{sections/design/2_3_4_interference_mitigation}
+\input{sections/design/2_3_5_link_performance_analysis}
+\input{sections/design/2_3_6_bandwidth_management}
+\input{sections/design/2_3_7_communication_redundancy}
 
-\subsection{Environmental Compliance}
-\input{sections/design/10_1_ip_standard_selection}
-\input{sections/design/10_2_dust_mud_rain_protection}
-\input{sections/design/10_3_drone_weather_thermal}
-\input{sections/design/10_4_lowlight_adaptation}
+\subsubsection{On-Board Computing and Sensors}
+\textit{Owner: Navigation Team + Ground Station Team + Arm Team}
 
-\subsection{Technical Budgets}
-\input{sections/design/11_1_mass_budget_task_breakdown}
-\input{sections/design/11_2_power_budget_scenarios}
-\input{sections/design/11_3_cog_slope_stability}
-\input{sections/design/11_4_data_link_budget}
+\input{sections/design/2_4_1_computing_architecture}
+\input{sections/design/2_4_2_sensor_suite}
+\input{sections/design/2_4_3_rover_camera_suite}
 
-\subsection{Operations}
-\input{sections/design/12_1_ground_station_setup_equipment}
-\input{sections/design/12_2_wired_wireless_transition}
-\input{sections/design/12_3_gcs_drone_operations_overrides}
-\input{sections/design/12_4_pretask_checklist_estop_verification}
+\subsubsection{Software Architecture}
+\textit{Owner: Navigation Team + Arm Team + Science Team}
+
+\input{sections/design/2_5_1_software_system_overview}
+\input{sections/design/2_5_2_state_estimation_localization}
+\input{sections/design/2_5_3_path_planning_autonomous_navigation}
+\input{sections/design/2_5_4_collision_avoidance}
+\input{sections/design/2_5_5_arm_kinematics_motion_planning}
+\input{sections/design/2_5_6_arm_inter_subsystem_communication}
+\input{sections/design/2_5_7_arm_safety_constraint_software}
+\input{sections/design/2_5_8_science_autonomous_operation_architecture}
+
+\subsubsection{Science}
+\textit{Owner: Science Team}
+
+\input{sections/design/2_6_1_scientific_documentation_framework}
+\input{sections/design/2_6_2_astrobiological_protocols}
+
+\subsubsection{Environmental Compliance}
+\textit{Owner: Suspension Team}
+
+\input{sections/design/2_7_1_ip_standard_selection_justification}
+\input{sections/design/2_7_2_dust_mud_rain_protection}
+
+\subsubsection{Operations}
+\textit{Owner: Ground Station Team}
+
+\input{sections/design/2_8_1_ground_station_setup_equipment}
+\input{sections/design/2_8_2_wired_to_wireless_transition}
+\input{sections/design/2_8_3_teleoperation_control_interface}
+\input{sections/design/2_8_4_visual_feedback_restrictions}
+\input{sections/design/2_8_5_estop_verification_pretask_checklist}
+
+\subsection{Rover Technical Budgets}
+\textit{Owner: Suspension Team + Electronics Team + Ground Station Team}
+
+\input{sections/design/3_1_mass_budget_task_breakdown}
+\input{sections/design/3_2_cog_slope_stability}
+\input{sections/design/3_3_power_budget_60min_operation}
+\input{sections/design/3_4_data_link_budget}
+
+\subsection{Rover Safety Systems}
+\textit{Owner: Electronics Team + Navigation Team + Arm Team}
+
+\input{sections/design/4_1_physical_estop_mounting_integration}
+\input{sections/design/4_2_rf_remote_estop_hardware_integration}
+\input{sections/design/4_3_indicator_lamp_state_machine}
+\input{sections/design/4_4_motion_warning_system}
+\input{sections/design/4_5_human_detection}
+\input{sections/design/4_6_mechanical_hard_stops_arm_joints}
+
+\subsection{Drone Design Description}
+\textit{Owner: Drone Team}
+
+\input{sections/design/5_1_physical_design_environmental_resilience}
+\input{sections/design/5_2_avionics_computing_architecture}
+\input{sections/design/5_3_communications_ground_control}
+\input{sections/design/5_4_localization_perception}
+\input{sections/design/5_5_autonomy_task_execution}
+
+\subsection{Drone Technical Budgets}
+\textit{Owner: Drone Team (Data Link Budget: cross-reference Section 5.3)}
+
+\input{sections/design/6_1_drone_mass_budget}
+\input{sections/design/6_2_drone_power_budget}
+\input{sections/design/6_3_drone_data_link_budget}
+
+\subsection{Drone Safety Systems}
+\textit{Owner: Drone Team}
+
+\input{sections/design/7_1_visual_signaling_enforcement_delays}
+\input{sections/design/7_2_failsafe_protocols}
+\input{sections/design/7_3_flight_operations_certification}
+

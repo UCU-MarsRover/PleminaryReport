@@ -31,6 +31,24 @@
 
 ---
 
+## Нова структура файлів (важливо)
+
+У проєкті більше немає командних `design.tex` для основного опису.
+
+Тепер контент вставляється у файли:
+
+- `sections/design/<subsection>.tex`
+
+Приклади:
+
+- `sections/design/2_3_5_link_performance_analysis.tex`
+- `sections/design/2_4_3_rover_camera_suite.tex`
+- `sections/design/5_3_communications_ground_control.tex`
+
+`sections/preliminary_design_description.tex` лише збирає ці підсекції через `\input{...}`.
+
+---
+
 ## Стандарти — детально
 
 ### ECSS-E-ST-10-06C — Технічна документація та інтерфейси
@@ -165,8 +183,8 @@ line width=1.2pt   % основний / виділений вузол
 
 ```
 1. Скопіюй стартовий сніпет нижче у teams/<твоя_команда>/figures/<назва>.tex
-2. Малюй діаграму в тому файлі (НЕ всередині design.tex)
-3. Вставляй у design.tex через:
+2. Малюй діаграму в тому файлі (НЕ inline у `sections/preliminary_design_description.tex`)
+3. Вставляй у відповідний файл `sections/design/<subsection>.tex` через:
 
       \begin{figure}[H]
         \centering
@@ -187,7 +205,7 @@ line width=1.2pt   % основний / виділений вузол
 1. Намалюй схему в EasyEDA за символами IEC 60617
 2. File → Export → PDF  (НЕ PNG — PDF зберігає векторну якість)
 3. Збережи як: teams/electronics/figures/<назва>.pdf
-4. Вставляй у design.tex через \includegraphics (як будь-яке фото)
+4. Вставляй у відповідний `sections/design/<subsection>.tex` через `\includegraphics` (як будь-яке фото)
 5. Переконайся що схема має основний напис (назва, ревізія, дата)
 6. Commit: git add teams/electronics/figures/<назва>.pdf && git commit
 ```
@@ -198,7 +216,7 @@ line width=1.2pt   % основний / виділений вузол
 1. Підготуй вид у CAD (SolidWorks / FreeCAD / Fusion 360)
 2. Експортуй як PDF (аркуш креслення, не скріншот 3D-вікна)
 3. Збережи як: teams/<команда>/figures/<назва>.pdf
-4. Вставляй через \includegraphics
+4. Вставляй у відповідний `sections/design/<subsection>.tex` через `\includegraphics`
 5. Переконайся що основний напис читається на аркуші A4
 6. Commit: git add teams/<команда>/figures/<назва>.pdf && git commit
 ```
@@ -320,7 +338,7 @@ main.pdf   # компілюється локально, не потрібен у
       where level=1{fill=ercblue!10}{fill=white}
     },
   }
-  [UCU Mars Rover\\{\scriptsize Рівень 0 — Система}
+  [UCU Space Robotics\\{\scriptsize Рівень 0 — Система}
     [Шасі\\{\scriptsize Р1}
       [Рама\\{\scriptsize Р2}]
       [Колеса $\times$6\\{\scriptsize Р2}]
@@ -358,13 +376,13 @@ main.pdf   # компілюється локально, не потрібен у
 
 ## Чеклист перед комітом діаграми
 
-- [ ] Файл лежить у `teams/<команда>/figures/` — не inline в `design.tex`
+- [ ] Файл лежить у `teams/<команда>/figures/` — не inline в `sections/preliminary_design_description.tex`
 - [ ] Кожен блок має підпис (назва + ключовий параметр)
 - [ ] Кожна стрілка має напрямок і підпис протоколу / сигналу
 - [ ] Шрифт читається на аркуші A4 (мінімум `\scriptsize` ≈ 8pt)
 - [ ] Кольори відповідають правилам стилю (білий / ercblue, без веселки)
 - [ ] EasyEDA експортований як PDF, а не PNG
 - [ ] CAD — аркуш креслення з основним написом, не скріншот 3D-вікна
-- [ ] У `design.tex` є `\caption{}` і `\label{}` для цієї фігури
+- [ ] У `sections/design/<subsection>.tex` є `\caption{}` і `\label{}` для цієї фігури
 - [ ] Діаграма компілюється без помилок (`latexmk -pdf main.tex` з кореня репо)
 - [ ] Commit message відповідає формату: `feat(<команда>): <опис>`
