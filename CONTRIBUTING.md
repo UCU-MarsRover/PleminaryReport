@@ -22,9 +22,13 @@
 
 Контент пишеться в:
 
-- `sections/design/*.tex`
+- `sections/design/<chapter>/<section>/<subsection>/<file>.tex`
 
-Кожен файл у `sections/design/` відповідає **одній** підсекції з плану (наприклад `5_5_link_performance_analysis.tex`).
+Кожен файл у `sections/design/` відповідає **одному** найнижчому пункту структури (leaf subsection).
+
+Приклад реального шляху:
+
+- `sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_5_link_performance_analysis.tex`
 
 ### Test plan
 
