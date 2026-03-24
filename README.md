@@ -1,12 +1,24 @@
 # Preliminary Report — ERC 2026
 
-LaTeX template for the **European Rover Challenge 2026 Preliminary Report**.
+## General
+
+Завдання звіту - максимально коротко, скорочуючи текст до мінімуму, за допомогою обрахунків, схем, фото та 3д моделей описати дизайн нашого марсохода та дрона,  а також - обгрунтувати виконання нами всіх вимог.
+
+Для цього в нас є 25 сторінок, не враховуючи титулки, змісту, та додатків. Тому текст має бути короткий, фото, схеми та таблиці мають бути акуратними та змістовними, щоб зекономити місце. 
+Великі схеми варто винести у відділ додатків.
+
 
 ---
 
-## DIAGRAMS STANDARDS
+## Diagram standarts
 
-**Всі стандарти** описані у `DIAGRAM_STANDARDS.md`
+**Всі стандарти** описані у [DIAGRAM_STANDARDS.md](DIAGRAM_STANDARDS.md)
+
+## Conribution rules
+
+**Всі правила для контрибуції** описані у [CONTRIBUTING.md](CONTRIBUTING.md)
+
+# !Обов'язково перечитай правила!
 
 ## Quick start
 
@@ -20,9 +32,6 @@ sudo apt install texlive-full latexmk
 ```bash
 latexmk -pdf main.tex && latexmk -c
 ```
-
-> **Перед тим як писати** — відкрий `main.tex` і заповни метадані команди:
-> `\teamname`, `\projectname`, `\affiliation`, `\submissiondate`, `\revisionnum`
 
 ---
 
@@ -43,25 +52,19 @@ latexmk -pdf main.tex && latexmk -c
 │
 ├── teams/                      # Технічний контент кожної підкоманди
 │   ├── arm/
-│   │   ├── design.tex          # Опис конструкції маніпулятора
 │   │   └── tests.tex           # Тести специфічні для маніпулятора
 │   ├── drone/
-│   │   ├── design.tex          # Опис конструкції дрона
-│   │   └── tests.tex
+│   │   ├── tests.tex
 │   ├── electronics/
 │   │   ├── design.tex          # Схеми живлення, електроніка
 │   │   └── tests.tex
 │   ├── ground_station/
-│   │   ├── design.tex          # Схеми комунікацій, GS архітектура
 │   │   └── tests.tex
 │   ├── navigation/
-│   │   ├── design.tex          # Навігація, сенсори, ROS
 │   │   └── tests.tex
 │   ├── science/
-│   │   ├── design.tex          # Науковий модуль
 │   │   └── tests.tex
 │   └── suspension/
-│       ├── design.tex          # Підвіска, колеса
 │       └── tests.tex
 │
 ├── tables/                     # Великі таблиці винесені окремо
@@ -85,11 +88,18 @@ latexmk -pdf main.tex && latexmk -c
 
 ## Куди що класти — коротко
 
-### Я з команди електроніки, пишу про схему живлення
+> **Примітка**: Проектний контент (design descriptions) організований у ієрархічній структурі
+> `sections/design/[chapter]/[section]/[subsection]/` 
+> Дивись файл [sections/preliminary_design_description.tex](sections/preliminary_design_description.tex)
+> для повного переліку розділів і шляхів для включення файлів.
 
-1. Схему намалюй в **EasyEDA**, експортуй як **PDF** → поклади в `figures/cad/power_system.pdf`
-2. Текстовий опис пиши в **`teams/electronics/design.tex`**
-3. Вставляй схему так:
+### Я пишу контент для розділу дизайну
+
+1. Знайди відповідний розділ і підрозділ у ієрархії `sections/design/`
+   - Наприклад, схема живлення: `sections/design/2_rover_design_description/2_2_electrical_power_subsystem/`
+2. Схему намалюй в **EasyEDA**, експортуй як **PDF** → поклади в `figures/cad/power_system.pdf`
+3. Текстовий опис пиши у відповідному `.tex` файлі розділу
+4. Вставляй схему так:
    ```latex
    \begin{figure}[h]
      \centering
@@ -98,38 +108,31 @@ latexmk -pdf main.tex && latexmk -c
      \label{fig:power}
    \end{figure}
    ```
-4. Тести для електроніки — в **`teams/electronics/tests.tex`**
 
 ---
 
-### Я з команди ground station, маю TikZ діаграму комунікацій
+### Я маю TikZ діаграму (комунікацій, архітектури, тощо)
 
-1. TikZ-код діаграми поклади окремим файлом: **`figures/tikz/gs_communication.tex`**
-2. Вставляй у `teams/ground_station/design.tex` через:
+1. TikZ-код діаграми поклади окремим файлом: **`figures/tikz/diagram_name.tex`**
+2. Вставляй у відповідний розділ дизайну через:
    ```latex
    \begin{figure}[h]
      \centering
-     \input{figures/tikz/gs_communication}
-     \caption{Ground station communication schema}
-     \label{fig:gs-comm}
+     \input{figures/tikz/diagram_name}
+     \caption{Diagram description}
+     \label{fig:diagram-label}
    \end{figure}
    ```
-3. Сам опис — в **`teams/ground_station/design.tex`**
+3. Текстовий опис і біографія діаграми — в відповідному `.tex` файлі у `sections/design/` ієрархії
+   - Наприклад, комунікаційної архітектури: `sections/design/2_rover_design_description/2_3_communication_subsystem/`
 
 ---
 
-### Я заповнюю RIO таблицю ризиків
+### Я беру участь в інших розділах (RIO, Budget, тощо)
 
-- Таблиця — в **`tables/rio_table.tex`**
-- Методологія і пояснення — в **`sections/rio_analysis.tex`**
-- Кольорову heat map ризиків (5×5 матрицю) — теж у `sections/rio_analysis.tex` як TikZ або таблиця
-
----
-
-### Я заповнюю тест-план
-
-- Таблиця тестів — в **`tables/test_plan.tex`**
-- Вступний текст і фото тест-стендів — в **`sections/preliminary_test_plan.tex`**
+- Вміст розділів **RIO Analysis**, **Project Budget**, **Matrix of Compliance** та **Test Plan** залишаються у відповідних файлах у `sections/`
+- Таблиці винесені в окремі файли: `tables/rio_table.tex`, `tables/test_plan.tex`, `tables/compliance_summary.tex`
+- Методологія і пояснення — у відповідних розділах
 
 ---
 
@@ -162,11 +165,13 @@ latexmk -pdf main.tex && latexmk -c
 | Параметр | Значення |
 |---|---|
 | Формат | A4, searchable PDF |
-| Максимум сторінок | 25 (без cover, TOC, Appendix 3) |
+| Максимум сторінок | 30 (25 сторінок на всі розділи + 5 сторінок на appendices, але без cover, TOC) |
 | Мова | Англійська |
 | Мінімальний шрифт | 10 pt |
 | Поля | ≥ 2.54 cm (1 inch) з усіх сторін |
 | Назва файлу | `<TeamName>_PreliminaryReport_ERC2026.pdf` |
+| Appendices | Опціонально: тільки додаткова інформація, яка не вмістилася в основному тексті (великі креслення, таблиці). **Важливо**: appendices входять у 30-сторінковий ліміт |
+
 
 ---
 
@@ -181,15 +186,3 @@ latexmk -pdf main.tex && latexmk -c
 - [ ] Файл названий правильно: `<TeamName>_PreliminaryReport_ERC2026.pdf`
 - [ ] Окремо здана Preliminary RF Form (без неї — дискваліфікація)
 
----
-
-## Як вбудувати MoC (.xlsx) у PDF
-
-ERC вимагає щоб Matrix of Compliance (`.xlsx`) була **вбудована прямо в PDF** як вкладення
-(це дає 6 балів замість 2). Після компіляції:
-
-1. Відкрий скомпільований PDF у **Foxit PDF Editor** (безкоштовна версія підходить)
-2. `Document → Attach a File` → вибери `MoC_<TeamName>_ERC2026.xlsx`
-3. Збережи PDF
-
----

@@ -76,6 +76,10 @@
 \titleformat{\section}{\large\bfseries\color{ercblue}}{{\thesection}}{1em}{}[\titlerule]
 \titleformat{\subsection}{\normalsize\bfseries\color{ercblue}}{{\thesubsection}}{1em}{}
 \titleformat{\subsubsection}{\normalsize\bfseries}{{\thesubsubsection}}{1em}{}
+\titleformat{\paragraph}[hang]{\normalsize\bfseries}{{\theparagraph}}{1em}{}
+\titlespacing*{\paragraph}{0pt}{1.0ex plus 0.2ex minus 0.1ex}{0.5ex}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 % --- PDF attachments (for embedding MoC .xlsx) -------------------------------
 \usepackage{attachfile2}
