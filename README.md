@@ -22,13 +22,16 @@
 
 ## Quick start
 
-Інсталяція інструментів:
+Installation of tools:
 ```bash
-# Повний набір (~4 GB) (рекомендую щоб не паритись):
+# Full bundle (~4 GB) (recommended to avoid issues):
 sudo apt install texlive-full latexmk
+
+# Required package for SI units formatting:
+sudo apt install texlive-science
 ```
 
-Компіляція pdf файлу і очистити допоміжні файли:
+Compile PDF and clean auxiliary files:
 ```bash
 latexmk -pdf main.tex && latexmk -c
 ```
