@@ -6,90 +6,121 @@
 \label{sec:design}
 
 \subsection{Product Trees / Physical Breakdown Structures}
+\label{subsec:product_trees_physical_breakdown_structures}
 
 \subsubsection{Rover Product Tree / Physical Breakdown Structure}
+\label{subsubsec:rover_product_tree_physical_breakdown_structure}
 \input{sections/design/1_product_trees_physical_breakdown/1_1_rover_product_tree}
 
 \subsubsection{Drone Product Tree / Physical Breakdown Structure}
+\label{subsubsec:drone_product_tree_physical_breakdown_structure}
 \input{sections/design/1_product_trees_physical_breakdown/1_2_drone_product_tree}
 
 \subsubsection{System Architecture Wiring Diagram}
+\label{subsubsec:system_architecture_wiring_diagram}
 \input{sections/design/1_product_trees_physical_breakdown/1_3_system_architecture_wiring_diagram}
 
 
 \subsection{Rover Design Description}
+\label{subsec:rover_design_description}
 
 \subsubsection{Mechanical Design}
+\label{subsubsec:mechanical_design}
 
 \paragraph{Chassis Configuration and Geometry}
+\label{par:chassis_configuration_geometry}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_1_chassis_configuration_geometry}
 
 \paragraph{Locomotion System and Wheel Design}
+\label{par:locomotion_system_wheel_design}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_2_locomotion_system_wheel_design}
 
 \paragraph{Turning Radius and Steering Kinematics}
+\label{par:turning_radius_steering_kinematics}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_3_turning_radius_steering_kinematics}
 
 \paragraph{Manipulator Configuration and Kinematics}
+\label{par:manipulator_configuration_kinematics}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_4_manipulator_configuration_kinematics}
 
 \paragraph{Joint Design and Actuators}
+\label{par:joint_design_actuators}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_5_joint_design_actuators}
 
 \paragraph{End-Effector Design}
+\label{par:end_effector_design}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_6_end_effector_design}
 
 \paragraph{Sample Storage and Weighing System}
+\label{par:sample_storage_weighing_system}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_7_sample_storage_weighing_system}
 
 \paragraph{Drill System Implementation}
+\label{par:drill_system_implementation}
 \input{sections/design/2_rover_design_description/2_1_mechanical_design/2_1_8_drill_system_implementation}
 
 \subsubsection{Electrical Power Subsystem}
+\label{subsubsec:electrical_power_subsystem}
 
 \paragraph{Battery Configuration and Hot-Swap Design}
+\label{par:battery_configuration_hotswap_design}
 \input{sections/design/2_rover_design_description/2_2_electrical_power_subsystem/2_2_1_battery_configuration_hotswap_design}
 
 \paragraph{Power Distribution and Regulation}
+\label{par:power_distribution_regulation}
 \input{sections/design/2_rover_design_description/2_2_electrical_power_subsystem/2_2_2_power_distribution_regulation}
 
 \subsubsection{Communication Subsystem}
+\label{subsubsec:communication_subsystem}
 
 \paragraph{Communication Architecture Overview}
+\label{par:communication_architecture_overview}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_1_communication_architecture_overview}
 
 \paragraph{Frequency Plan}
+\label{par:frequency_plan}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_2_frequency_plan}
 
 \paragraph{Antenna Design and Placement}
+\label{par:antenna_design_placement}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_3_antenna_design_placement}
 
 \paragraph{Interference Mitigation}
+\label{par:interference_mitigation}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_4_interference_mitigation}
 
 \paragraph{Link Performance Analysis}
+\label{par:link_performance_analysis}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_5_link_performance_analysis}
 
 \paragraph{Bandwidth Management}
+\label{par:bandwidth_management}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_6_bandwidth_management}
 
 \paragraph{Communication Redundancy}
+\label{par:communication_redundancy}
 \input{sections/design/2_rover_design_description/2_3_communication_subsystem/2_3_7_communication_redundancy}
 
 \subsubsection{On-Board Sensor and Imaging Systems}
+\label{subsubsec:onboard_sensor_imaging_systems}
 
 \paragraph{Navigation Sensor Suite}
+\label{par:navigation_sensor_suite}
 \input{sections/design/2_rover_design_description/2_4_onboard_sensor_imaging_systems/2_4_1_navigation_sensor_suite}
 
 \paragraph{Science Sensor Suite}
+\label{par:science_sensor_suite}
 \input{sections/design/2_rover_design_description/2_4_onboard_sensor_imaging_systems/2_4_2_science_sensor_suite}
 
 \paragraph{Rover Camera Suite}
+\label{par:rover_camera_suite}
 \input{sections/design/2_rover_design_description/2_4_onboard_sensor_imaging_systems/2_4_3_rover_camera_suite}
 
 \subsubsection{Software Architecture}
+\label{subsubsec:software_architecture}
 
 \paragraph{Software System Overview}
+\label{par:software_system_overview}
 \input{sections/design/2_rover_design_description/2_5_software_architecture/2_5_1_software_system_overview}
 
 \paragraph{State Estimation and Localization}
@@ -101,143 +132,195 @@
 \input{sections/design/2_rover_design_description/2_5_software_architecture/2_5_3_autonomous_navigation_collision_avoidance}
 
 \paragraph{Arm Kinematics and Motion Planning}
+\label{par:arm_kinematics_motion_planning}
 \input{sections/design/2_rover_design_description/2_5_software_architecture/2_5_4_arm_kinematics_motion_planning}
 
 \paragraph{Science Autonomous Operation Architecture}
+\label{par:science_autonomous_operation_architecture}
 \input{sections/design/2_rover_design_description/2_5_software_architecture/2_5_5_science_autonomous_operation_architecture}
 
 \subsubsection{Environmental Compliance}
+\label{subsubsec:environmental_compliance}
 
 \paragraph{IP Standard Selection and Justification}
+\label{par:ip_standard_selection_justification}
 \input{sections/design/2_rover_design_description/2_6_environmental_compliance/2_6_1_ip_standard_selection_justification}
 
 \paragraph{Design Provisions for Dust, Mud, and Rain Protection}
+\label{par:design_provisions_dust_mud_rain_protection}
 \input{sections/design/2_rover_design_description/2_6_environmental_compliance/2_6_2_design_provisions_dust_mud_rain_protection}
 
 \paragraph{Low-Light Adaptation}
+\label{par:rover_low_light_adaptation}
 \input{sections/design/2_rover_design_description/2_6_environmental_compliance/2_6_3_low_light_adaptation}
 
 \subsubsection{Operations}
+\label{subsubsec:operations}
 
 \paragraph{Ground Station Setup and Equipment}
+\label{par:ground_station_setup_equipment}
 \input{sections/design/2_rover_design_description/2_7_operations/2_7_1_ground_station_setup_equipment}
 
 \paragraph{Wired-to-Wireless Control Transition}
+\label{par:wired_to_wireless_control_transition}
 \input{sections/design/2_rover_design_description/2_7_operations/2_7_2_wired_to_wireless_control_transition}
 
 \paragraph{Teleoperation and Control Interface}
+\label{par:teleoperation_control_interface}
 \input{sections/design/2_rover_design_description/2_7_operations/2_7_3_teleoperation_control_interface}
 
 \paragraph{Visual Feedback Restrictions}
+\label{par:visual_feedback_restrictions}
 \input{sections/design/2_rover_design_description/2_7_operations/2_7_4_visual_feedback_restrictions}
 
 \subsection{Rover Technical Budgets}
+\label{subsec:rover_technical_budgets}
 
 \subsubsection{Mass Budget and Per-Task Configuration Breakdown}
+\label{subsubsec:mass_budget_per_task_configuration_breakdown}
 \input{sections/design/3_rover_technical_budgets/3_1_mass_budget_task_breakdown/3_1}
 
 \subsubsection{CoG Analysis and Slope Stability}
+\label{subsubsec:cog_analysis_slope_stability}
 \input{sections/design/3_rover_technical_budgets/3_2_cog_slope_stability/3_2}
 
 \subsubsection{Power Budget -- Energy Budget and 60-Minute Operation Estimate}
+\label{subsubsec:power_budget_energy_budget_operation_estimate}
 \input{sections/design/3_rover_technical_budgets/3_3_power_budget/3_3}
 
 \subsubsection{Data Link Budget}
+\label{subsubsec:data_link_budget}
 \input{sections/design/3_rover_technical_budgets/3_4_data_link_budget/3_4}
 
 \subsection{Rover Safety Systems}
+\label{subsec:rover_safety_systems}
 
 \subsubsection{Emergency Stop System}
+\label{subsubsec:emergency_stop_system}
 
 \paragraph{Physical Emergency Stop}
+\label{par:physical_emergency_stop}
 \input{sections/design/4_rover_safety_systems/4_1_emergency_stop_system/4_1_1_physical_emergency_stop}
 
 \paragraph{RF Remote Emergency Stop}
+\label{par:rf_remote_emergency_stop}
 \input{sections/design/4_rover_safety_systems/4_1_emergency_stop_system/4_1_2_rf_remote_emergency_stop}
 
 \subsubsection{Motion Warning and Delay System}
+\label{subsubsec:motion_warning_delay_system}
 
 \paragraph{Activity Indicator Lamp Hardware}
+\label{par:activity_indicator_lamp_hardware}
 \input{sections/design/4_rover_safety_systems/4_2_motion_warning_delay_system/4_2_1_activity_indicator_lamp_hardware}
 
 \paragraph{Activity Indicator Lamp Software}
+\label{par:activity_indicator_lamp_software}
 \input{sections/design/4_rover_safety_systems/4_2_motion_warning_delay_system/4_2_2_activity_indicator_lamp_software}
 
 \paragraph{Pre-Motion 5s Delay}
+\label{par:pre_motion_5s_delay}
 \input{sections/design/4_rover_safety_systems/4_2_motion_warning_delay_system/4_2_3_pre_motion_5s_delay}
 
 \subsubsection{Human Detection Safety System}
+\label{subsubsec:human_detection_safety_system}
 \input{sections/design/4_rover_safety_systems/4_3_human_detection_safety_system/4_3}
 
 \subsection{Drone Design Description}
+\label{subsec:drone_design_description}
 
 \subsubsection{Physical Design and Environmental Resilience}
+\label{subsubsec:physical_design_environmental_resilience}
 
 \paragraph{UAV Platform Overview}
+\label{par:uav_platform_overview}
 \input{sections/design/5_drone_design_description/5_1_physical_design_environmental_resilience/5_1_1_uav_platform_overview}
 
 \paragraph{Rover-Mounted Landing Platform}
+\label{par:rover_mounted_landing_platform}
 \input{sections/design/5_drone_design_description/5_1_physical_design_environmental_resilience/5_1_2_rover_mounted_landing_platform}
 
 \paragraph{Weather and Thermal Protection}
+\label{par:weather_thermal_protection}
 \input{sections/design/5_drone_design_description/5_1_physical_design_environmental_resilience/5_1_3_weather_thermal_protection}
 
 \subsubsection{Avionics and Computing Architecture}
+\label{subsubsec:avionics_computing_architecture}
 
 \paragraph{Flight Control and Companion Computing}
+\label{par:flight_control_companion_computing}
 \input{sections/design/5_drone_design_description/5_2_avionics_computing_architecture/5_2_1_flight_control_companion_computing}
 
 \paragraph{System Redundancy}
+\label{par:system_redundancy}
 \input{sections/design/5_drone_design_description/5_2_avionics_computing_architecture/5_2_2_system_redundancy}
 
 \subsubsection{Communications and Ground Control}
+\label{subsubsec:communications_ground_control}
 
 \paragraph{Radio Frequency Architecture}
+\label{par:radio_frequency_architecture}
 \input{sections/design/5_drone_design_description/5_3_communications_ground_control/5_3_1_radio_frequency_architecture}
 
 \paragraph{Non-Line-of-Sight Operations}
+\label{par:non_line_of_sight_operations}
 \input{sections/design/5_drone_design_description/5_3_communications_ground_control/5_3_2_non_line_of_sight_operations}
 
 \paragraph{Ground Control Station and Overrides}
+\label{par:ground_control_station_overrides}
 \input{sections/design/5_drone_design_description/5_3_communications_ground_control/5_3_3_ground_control_station_overrides}
 
 \subsubsection{Localization and Perception}
+\label{subsubsec:localization_perception}
 
 \paragraph{GNSS-Denied Localization}
+\label{par:gnss_denied_localization}
 \input{sections/design/5_drone_design_description/5_4_localization_perception/5_4_1_gnss_denied_localization}
 
 \paragraph{Computer Vision and Imagery}
+\label{par:computer_vision_imagery}
 \input{sections/design/5_drone_design_description/5_4_localization_perception/5_4_2_computer_vision_imagery}
 
 \paragraph{Low-Light Adaptation}
+\label{par:drone_low_light_adaptation}
 \input{sections/design/5_drone_design_description/5_4_localization_perception/5_4_3_low_light_adaptation}
 
 \subsubsection{Autonomy and Task Execution}
+\label{subsubsec:autonomy_task_execution}
 
 \paragraph{Autonomous Navigation Pipeline}
+\label{par:autonomous_navigation_pipeline}
 \input{sections/design/5_drone_design_description/5_5_autonomy_task_execution/5_5_1_autonomous_navigation_pipeline}
 
 \paragraph{Collision Avoidance}
+\label{par:drone_collision_avoidance}
 \input{sections/design/5_drone_design_description/5_5_autonomy_task_execution/5_5_2_collision_avoidance}
 
 \subsection{Drone Technical Budgets}
+\label{subsec:drone_technical_budgets}
 
 \subsubsection{Drone Mass Budget}
+\label{subsubsec:drone_mass_budget}
 \input{sections/design/6_drone_technical_budgets/6_1_drone_mass_budget/6_1}
 
 \subsubsection{Drone Power Budget}
+\label{subsubsec:drone_power_budget}
 \input{sections/design/6_drone_technical_budgets/6_2_drone_power_budget/6_2}
 
 \subsubsection{Drone Data Link Budget}
+\label{subsubsec:drone_data_link_budget}
 \input{sections/design/6_drone_technical_budgets/6_3_drone_data_link_budget/6_3}
 
 \subsection{Drone Safety Systems}
+\label{subsec:drone_safety_systems}
 
 \subsubsection{Visual Signaling and Enforcement Delays}
+\label{subsubsec:visual_signaling_enforcement_delays}
 \input{sections/design/7_drone_safety_systems/7_1_visual_signaling_enforcement_delays/7_1}
 
 \subsubsection{Failsafe Protocols}
+\label{subsubsec:failsafe_protocols}
 \input{sections/design/7_drone_safety_systems/7_2_failsafe_protocols/7_2}
 
 \subsubsection{Flight Operations and Certification}
+\label{subsubsec:flight_operations_certification}
 \input{sections/design/7_drone_safety_systems/7_3_flight_operations_certification/7_3}
