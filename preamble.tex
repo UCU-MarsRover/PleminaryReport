@@ -43,6 +43,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+% --- Measurement Units Standard Notations --------------------------------------------------------------------
+\usepackage{siunitx}
+\DeclareSIUnit{\fps}{fps}
+
 % --- Lists -------------------------------------------------------------------
 \usepackage{enumitem}
 
@@ -80,6 +84,14 @@
 \titlespacing*{\paragraph}{0pt}{1.0ex plus 0.2ex minus 0.1ex}{0.5ex}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+
+% --- Autoref names -----------------------------------------------------------
+\AtBeginDocument{
+    \renewcommand{\sectionautorefname}{§}
+    \renewcommand{\subsectionautorefname}{§}
+    \renewcommand{\subsubsectionautorefname}{§}
+    \renewcommand{\paragraphautorefname}{§}
+}
 
 % --- PDF attachments (for embedding MoC .xlsx) -------------------------------
 \usepackage{attachfile2}
