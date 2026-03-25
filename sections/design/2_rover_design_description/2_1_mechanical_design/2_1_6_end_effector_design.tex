@@ -1,8 +1,85 @@
 % Tiny contract
-% Teams: [team-name]
-% Requirements: [REQ-*]
-% Status: [draft|in-progress|done]
+% Teams: Arm, Science
+% Requirements: REQ-GEN-090, REQ-GEN-100, REQ-DES-140
+% Status: in-progress
 
-% Placeholder content for sections/design/2/2_1/2_1_6_end_effector_design.tex
+% TODO: Add specific probe dimensions/weights (REQ-GEN-100)
+% TODO: Add grip force specification with margin of safety calculation
+% TODO: Reference load cell model/datasheet
+% TODO: Add gripper general and a few specific dimensions
 
-[Add content for this subsection.]
+End-effector of robot arm is a 2-finger parallel jaw gripper designed for maintenance
+panel operation (REQ-GEN-090) and probe collection (REQ-GEN-100).
+
+There is a unified easy-to-switch connection between end-effector and arm,
+giving us the ability to switch end-effectors to be optimized for specific tasks.
+
+% TODO: Replace [180] with actual max opening from CAD, add min opening value
+The gripper mechanism provides a maximum opening width of 180\,mm and a
+grip force of [TBD]\,N. The fingers employ a hybrid construction:
+load cells serve as the structural base providing integrated force sensing,
+CNC-machined aluminum ensures rigidity, 3D-printed components enable custom geometry,
+and textured rubber contact surfaces maximize friction while
+conforming to irregular object shapes.
+
+% TODO: Add NEMA motor model number (NEMA 17/23/24?), gear reduction ratio if any
+Actuation is provided by a high-torque NEMA motor
+delivering [TBD]\,Nm torque. The integrated load cells enable closed-loop
+force control, essential for applying calibrated pressure to maintenance panel
+switches without over- or under-pressing.
+
+% TODO: Verify 6-DOF count matches actual design in manipulator kinematics section
+6-DOF arm kinematics (\autoref{par:manipulator_configuration_kinematics}) allows the gripper to approach
+maintenance panel elements (switches, buttons, electromagnets, plugs)
+from arbitrary orientations as required for human-ergonomic interfaces
+(REQ-GEN-090, REQ-DES-140). A camera mounted adjacent to the gripper provides
+visual feedback for operator and computer vision algorithm during maintenance
+and probe collecting tasks.
+
+% TODO: Replace placeholders with actual images
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{teams/arm/figures/Green_Wrist_Assembly_2.png}
+        \label{fig:gripper_image_1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{teams/arm/figures/Green_Wrist_Assembly_3.png}
+        \label{fig:gripper_image_2}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{teams/arm/figures/Green_Wrist_Assembly_4.png}
+        \label{fig:gripper_image_3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{teams/arm/figures/placeholder.png}
+        \label{fig:gripper_concept_scheme}
+    \end{subfigure}
+    \caption{Early concept of gripper mechanism assembly showing parallel jaw fingers.}
+    \label{fig:gripper_mechanism}
+\end{figure}
+
+\paragraph{Surface Sample Collection Head}
+
+% TODO: Describe bucket/scoop geometry - internal volume for 100g regolith + 15cm rock (REQ-FUN-080)
+% TODO: Specify material (aluminum alloy?) and mass
+% TODO: Explain retention mechanism (lips, covers) and release mechanism (<5% loss, REQ-FUN-110)
+% TODO: Describe interface with arm (quick-change mount?)
+[Placeholder for Science Team --- addresses REQ-FUN-080, REQ-FUN-110.]
+
+\paragraph{Astro-Bio Liquid Sampling Attachment}
+
+% TODO: Specify peristaltic pump model, flow rate (mL/min), and tubing specs (REQ-GEN-120)
+% TODO: Describe hermetic sealing for planetary protection (material: PTFE/silicone?)
+% TODO: List integrated sensors (pH range? temperature range?)
+% TODO: Explain how it prevents cross-contamination between samples (REQ-DES-140)
+[Placeholder for Science Team --- addresses REQ-GEN-120, REQ-DES-140.]
