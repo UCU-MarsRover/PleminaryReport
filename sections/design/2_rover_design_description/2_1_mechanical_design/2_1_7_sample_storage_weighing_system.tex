@@ -1,8 +1,48 @@
 % Tiny contract
-% Teams: [team-name]
+% Teams: Science Team
 % Requirements: [REQ-*]
 % Status: [draft|in-progress|done]
 
 % Placeholder content for sections/design/2/2_1/2_1_7_sample_storage_weighing_system.tex
 
-[Add content for this subsection.]
+The onboard sample storage and mass measurement system is designed as an integrated mechanical and sensing architecture that ensures secure containment of collected materials, accurate mass determination, and fully autonomous operation during all mission phases. The system is based on a three-chamber container configuration, where each chamber is dedicated to a specific type of sample: regolith, rock, and deep subsurface material. Each chamber is dimensioned to accommodate its corresponding sample type, with sufficient internal volume for at least 100 grams of regolith, solid rock fragments with a minimum characteristic length of 15 cm, and material extracted from drilling depths exceeding 30 cm.
+
+Each chamber consists of a dual-layer structure. The outer container provides structural protection and mechanical integration with the rover, while the inner container is mechanically isolated and mounted on a load cell sensor. This inner container acts as the primary measurement element, allowing precise mass determination independent of external structural loads. The materials selected for the containers ensure consistent density within a tolerance of ±5\%, while also providing sufficient mechanical strength to withstand static loads, dynamic shocks, and vibrations generated during rover locomotion and drilling operations.
+
+\textbf{Container Mechanical Concept.} The inner container is mounted on a lever-based load transmission mechanism. One side of the load cell is rigidly fixed to the container frame, while the opposite side acts as a deformable sensing element. The inner chamber applies force onto this element, enabling accurate measurement of the sample mass through controlled deformation. The fixation points are designed to minimize parasitic forces and ensure that only vertical loading contributes to the measurement signal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/container_scheme.png}
+    \caption{Conceptual scheme of the dual-container system with integrated load cell}
+\end{figure}
+
+The three containers are mounted within a rotating drum mechanism that enables sequential positioning of each chamber beneath the drilling unit. The drum rotates to align the selected container with the drill axis during sample acquisition. Once positioned, the container lid automatically opens through a passive mechanical trigger or actuator synchronized with the drill operation. After the sample is deposited, the container autonomously closes using a spring-loaded or motor-driven sealing mechanism, ensuring hermetic isolation.
+
+\textbf{Rotating Drum Integration.} The drum structure ensures precise angular positioning and repeatability, allowing each chamber to be indexed accurately. This approach minimizes the need for complex robotic manipulation and simplifies the overall system architecture while maintaining reliability.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/drum_mechanism.png}
+    \caption{Rotating drum system for container positioning under the drill}
+\end{figure}
+
+Hermetic sealing is achieved through integrated gasket interfaces and controlled closure force, preventing contamination between different sample types and preserving material integrity during transport. The sealing system is designed to maintain performance under repeated opening and closing cycles, as well as under varying environmental conditions such as dust exposure and mechanical vibration.
+
+\textbf{Mass Measurement System.} Each container chamber is equipped with an independent load cell sensor located beneath the inner container. These sensors operate in parallel and allow simultaneous, autonomous measurement of each sample without operator intervention. The measurement system includes signal conditioning circuitry, amplification stages, and analog-to-digital conversion to ensure high-resolution data acquisition.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/load_cell_setup.png}
+    \caption{Load cell integration beneath the inner container}
+\end{figure}
+
+To maintain measurement accuracy during rover operation, the system incorporates dynamic compensation techniques. These include filtering of vibration-induced noise, compensation for orientation changes (tilt and rotation), and stabilization algorithms applied to the sensor output. The measurement process is continuously validated, ensuring that the majority of readings remain within a ±1 gram accuracy range.
+
+The complete architecture enables continuous monitoring and logging of sample mass for each container independently. This multi-channel design ensures that all collected samples are properly quantified and documented, supporting reliable scientific analysis and mission evaluation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/3d_model_container.png}
+    \caption{3D model of the container and measurement system}
+\end{figure}
