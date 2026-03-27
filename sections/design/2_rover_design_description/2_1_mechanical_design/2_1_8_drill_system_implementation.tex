@@ -1,8 +1,75 @@
 % Tiny contract
-% Teams: [team-name]
-% Requirements: [REQ-*]
+% Teams: Science Team
+% Requirements: [REQ-FUN-130, REQ-FUN-130, REQ-DES-090]
 % Status: [draft|in-progress|done]
 
 % Placeholder content for sections/design/2/2_1/2_1_8_drill_system_implementation.tex
 
 [Add content for this subsection.]
+
+The drill system is designed as a compact, adaptive sampling mechanism capable of deep subsurface penetration, surface regolith collection, and rock acquisition using a unified architecture. The drill head consists of eight articulated petals that operate in two primary configurations: an expanded state for penetration and acquisition, and a closed state for sample retention and extraction.
+
+In the expanded configuration, the petals are oriented radially outward, forming a cutting geometry perpendicular to the drilling axis. This increases the effective drilling diameter and distributes cutting forces, improving penetration efficiency in heterogeneous soil conditions. Rotational motion is provided by an electric drive system, delivering controlled torque and angular velocity sufficient for penetration beyond 30 cm depth in compacted regolith.
+
+\textbf{Mechanical and Operational Parameters.} The key parameters of the drill system are summarized in Table~\ref{tab:drill_params}. These values will be finalized following experimental validation.
+
+\begin{table}[H]
+\centering
+\caption{Drill System Parameters (Preliminary)}
+\label{tab:drill_params}
+\begin{tabular}{|l|c|c|}
+\hline
+Parameter & Symbol & Value \\
+\hline
+Rotational speed & $\omega$ & [RPM placeholder] \\
+Output torque & $T$ & [Nm placeholder] \\
+Maximum penetration depth & $d_{max}$ & $> 30$ cm \\
+Drill diameter (open state) & $D$ & [mm placeholder] \\
+Number of petals & $n$ & 8 \\
+Petal closing force & $F_c$ & [N placeholder] \\
+Retention chamber volume & $V$ & [cm$^3$ placeholder] \\
+\hline
+\end{tabular}
+\end{table}
+
+\textbf{Deep Sampling Mechanism.} Upon reaching the target depth, an internal actuation system triggers simultaneous closure of all petals. This mechanism is driven through the central shaft, converting rotational or linear input into synchronized angular motion of the petals. The closing action encapsulates the surrounding material within the internal chamber, forming a sealed volume that prevents sample loss during extraction.
+
+\textbf{Surface and Rock Sampling Mode.} For surface operations, the drill head remains in the open configuration to collect regolith or capture rock fragments. After engagement, the petals close to secure the material before lifting. This allows the same mechanism to operate across multiple sample types without reconfiguration.
+
+\textbf{Depth Measurement and Control.} Accurate depth determination is achieved through a combination of rotational sensing and positional tracking. A Hall effect sensor is integrated into the drive system to measure shaft rotation, enabling indirect estimation of penetration depth based on calibrated conversion between rotations and linear displacement. Additional positional feedback may be incorporated to improve robustness.
+
+\begin{table}[H]
+\centering
+\caption{Depth Sensing and Control Components}
+\label{tab:depth_sensing}
+\begin{tabular}{|l|c|c|}
+\hline
+Component & Function & Status \\
+\hline
+Hall effect sensor & Rotation counting & Planned \\
+Encoder (optional) & High-resolution position feedback & Placeholder \\
+Depth conversion model & Rotation-to-depth mapping & Placeholder \\
+Control threshold & Stop condition ($>30$ cm) & Placeholder \\
+\hline
+\end{tabular}
+\end{table}
+
+The control system continuously monitors the measured depth and automatically stops the drilling process once the required penetration threshold is exceeded. Depth data is logged to ensure traceability of each collected subsurface sample.
+
+\textbf{Sample Retention and Extraction.} The closed petal configuration forms a temporary containment chamber that maintains sample integrity during extraction. The retention force is sufficient to withstand dynamic loads caused by rover motion, vibration, and orientation changes.
+
+\textbf{Drill-to-Container Transfer.} After extraction, the drill is positioned above the designated container. The transfer process is fully automated: the container opens, the drill aligns, and the petals reopen to release the sample. The geometry ensures direct material drop into the container, minimizing loss and preventing cross-contamination.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/drill_operations.png}
+    \caption{Drill operation sequence: penetration, closure, extraction, and transfer}
+\end{figure}
+
+The system is designed for repeatable operation across multiple cycles, maintaining consistent penetration performance, reliable sample retention, and complete transfer of collected material.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/drill_3d_model.png}
+    \caption{3D model of the drill system with articulated petal mechanism}
+\end{figure}
