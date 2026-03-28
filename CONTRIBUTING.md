@@ -6,7 +6,7 @@
 
 Для `Preliminary Design Description` діє правило:
 
-- **1 subsection file = 1 PR**
+- **1 PR = 1 subsection file**
 
 Це мінімізує merge-конфлікти і пришвидшує рев'ю.
 
@@ -61,6 +61,41 @@
    - які крос-посилання додані/оновлені
    - що ще лишилось (якщо є)
    - додай скріншот скопільованої секції, щоб було зручно рев'ювити твою секцію
+4. Новий PR створюємо як **Draft**. Після перевірки тімлід переводить його з Draft у Ready for review.
+
+### Стандарт назви гілки
+
+- `des/<subsection-id>-<short-title>`
+- приклад: `des/5.5-link-performance-analysis`
+
+## Рекомендований git workflow
+
+Це нормальний workflow для цього репозиторію: спочатку вносиш усі зміни локально, потім створюєш нову гілку, комітиш **тільки свій файл**, пушиш і повертаєшся в `main`.
+
+```bash
+# 0) Оновити main
+git checkout main
+git pull
+
+# 1) Після того як зробив зміни у своєму subsection-файлі
+git checkout -b des/<subsection-id>-<short-title>
+
+# 2) Додати лише змінений файл
+git add sections/design/<chapter>/<section>/<subsection>/<file>.tex
+
+# 3) Коміт
+git commit -m "DES <subsection-id>: short title"
+
+# 4) Перший пуш нової гілки з прив'язкою remote
+git push -u origin des/<subsection-id>-<short-title>
+
+# 5) Створити PR на GitHub і одразу позначити Draft
+
+# 6) Повернутись у main
+git checkout main
+```
+
+Якщо після змін потрібен ще один PR, створюй **нову гілку** від актуального `main` і повторюй кроки.
 
 ### Не робимо
 
@@ -107,7 +142,6 @@ latexmk -c
 | Один PR змінює 3-4 subsection файли | Тримай PR у межах одного `sections/design/<file>.tex` |
 | Залишені заглушки `[Add content ...]` | Замінити на реальний текст перед merge |
 | Пишеш контент у `sections/preliminary_design_description.tex` | Писати в конкретний `sections/design/*.tex` |
-| `REQ-???` залишився в готовому subsection | Замінити на фактичні `REQ-*` перед merge |
 
 ## Питання
 
