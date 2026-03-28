@@ -97,6 +97,31 @@ git checkout main
 
 Якщо після змін потрібен ще один PR, створюй **нову гілку** від актуального `main` і повторюй кроки.
 
+## Якщо прийшли правки в Draft PR
+
+Якщо в твоєму Draft PR попросили зміни, **не створюй новий PR**.
+Працюй у тій самій гілці, яка прив'язана до цього PR:
+
+```bash
+# 1) Перейти на гілку цього PR
+git checkout des/<subsection-id>-<short-title>
+
+# 2) Внести правки у свій файл
+
+# 3) Додати змінений файл
+git add sections/design/<chapter>/<section>/<subsection>/<file>.tex
+
+# 4) Новий коміт з правками
+git commit -m "DES <subsection-id>: address review comments"
+
+# 5) Пуш у ту саму гілку
+git push
+```
+
+Після `git push` цей самий PR на GitHub оновлюється **автоматично** (нові коміти додаються в нього).
+
+Коли всі правки враховані, тімлід переводить PR з Draft у Ready for review.
+
 ### Не робимо
 
 - Не змішуємо кілька subsection в одному PR.
